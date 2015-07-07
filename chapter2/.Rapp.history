@@ -1,0 +1,797 @@
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3))#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3))#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3))#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+title("Loss Function")
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3))#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+title("Loss Function", xlab = "y \cdot y")
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+title("Loss Function", xlab = "y \cdot y")
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+title("Loss Function", xlab = "y \cdot y")
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log2(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend("topleft", inset=.5, c("Misclassfication", "Exponential", "Suport Vector", "Squared Erro", "Binomial Deviance",))
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend("topleft", inset=.5, c("Misclassfication", "Exponential", "Suport Vector", "Squared Erro", "Binomial Deviance"), col =c("gray","darkgreen", "orange","red","green"))
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend("topleft", inset=.5, c("Misclassfication", "Exponential", "Suport Vector", "Squared Erro", "Binomial Deviance"), lwd = 2,col =c("gray","darkgreen", "orange","red","green"))
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend(locator(1), inset=.5, c("Misclassfication", "Exponential", "Suport Vector", "Squared Erro", "Binomial Deviance"), lwd = 2,col =c("gray","darkgreen", "orange","red","green"))
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend(locator(1), inset=.05, c("Misclassfication", "Exponential", "Suport Vector", "Squared Erro", "Binomial Deviance"), lwd = 2,col =c("gray","darkgreen", "orange","red","green"))
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend(topleft, inset=.05, c("Misclassfication", "Exponential", "Suport Vector", "Squared Erro", "Binomial Deviance"), lwd = 2,col =c("gray","darkgreen", "orange","red","green"))
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend("topleft", inset=.05, c("Misclassfication", "Exponential", "Suport Vector", "Squared Erro", "Binomial Deviance"), lwd = 2,col =c("gray","darkgreen", "orange","red","green"))
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend("topleft", c("Misclassfication", "Exponential", "Suport Vector", "Squared Erro", "Binomial Deviance"), lwd = 2,col =c("gray","darkgreen", "orange","red","green"))
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend(locator(1), c("Misclassfication", "Exponential", "Suport Vector", "Squared Erro", "Binomial Deviance"), lwd = 2,col =c("gray","darkgreen", "orange","red","green"))
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend(locator(1), c("Misclassfication", "Exponential", "Suport Vector", "Squared Error", "Binomial Deviance"), lwd = 2,col =c("gray","darkgreen", "orange","red","green"))
+getwd()
+jpeg("lossfunction.jpg")
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend(locator(1), c("Misclassfication", "Exponential", "Suport Vector", "Squared Error", "Binomial Deviance"), lwd = 2,col =c("gray","darkgreen", "orange","red","green"))
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend("topleft", c("Misclassfication", "Exponential", "Suport Vector", "Squared Error", "Binomial Deviance"), lwd = 2,col =c("gray","darkgreen", "orange","red","green"))
+dev.off()
+pdf("lossfunction.pdf")
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend("topright", c("Misclassfication", "Exponential", "Suport Vector", "Squared Error", "Binomial Deviance"), lwd = 2,col =c("gray","darkgreen", "orange","red","green"))
+dev.off()
+?plotmath
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+mathplot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = expression(y \cdot f), ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend("topright", c("Misclassfication", "Exponential", "Suport Vector", "Squared Error", "Binomial Deviance"), lwd = 2,col =c("gray","darkgreen", "orange","red","green"))
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = expression(y \cdot f), ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend("topright", c("Misclassfication", "Exponential", "Suport Vector", "Squared Error", "Binomial Deviance"), lwd = 2,col =c("gray","darkgreen", "orange","red","green"))
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = (y \cdot f), ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend("topright", c("Misclassfication", "Exponential", "Suport Vector", "Squared Error", "Binomial Deviance"), lwd = 2,col =c("gray","darkgreen", "orange","red","green"))
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "y \cdot f", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend("topright", c("Misclassfication", "Exponential", "Suport Vector", "Squared Error", "Binomial Deviance"), lwd = 2,col =c("gray","darkgreen", "orange","red","green"))
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+legend("topright", c("Misclassfication", "Exponential", "Suport Vector", "Squared Error", "Binomial Deviance"), lwd = 2,col =c("gray","darkgreen", "orange","red","green"))
+x <- seq(-2, 2, 0.01)#
+Mis <- rep(1,length(x))#
+Mis[x>0] = 0#
+plot(x,Mis,type="l", lwd =2, col = "gray", ylim = c(0,3), main = "Loss Function", xlab = "yf", ylab = "Loss")#
+Exp = exp(-x);#
+lines(x, Exp, type="l", lwd =2, col = "darkgreen")#
+Svm <- -(x - 1)#
+Svm[x > 1] = 0#
+lines(x, Svm, type = "l", lwd =2, col = "orange")#
+Square <- (x - 1)^2#
+lines(x, Square, type = "l", lwd = 2, col = "red")#
+Deviance <- log(1+exp(-2*x))#
+#lines(x, Deviance, Square, type = "l", lwd =2, col ="green")#
+#legend("topright", c("Misclassfication", "Exponential", "Suport Vector", "Squared Error", "Binomial Deviance"), lwd = 2,col =c("gray","darkgreen", "orange","red","green"))#
+legend("topright", c("Misclassfication", "Exponential", "Suport Vector", "Squared Error"), lwd = 2,col =c("gray","darkgreen", "orange","red"))
+getwd()
+mystats <- function(x, na.omit = FALSE){
+if(na.omit)
+x<-x[!is.na(x)]
+x <- mean(x)
+n <- length(x)
+s <- sd(x)
+skew <- sum((x-m)^3/s^3)/n
+return(c(n=n,mean=n,stdev=s,skew=skew))
+}
+vars<- c("mpg","hp","wt")
+apply(mtcars[vars],mystats)
+sapply(mtcars[vars],mystats)
+summary(mtcars[vars])
+mystats <- function(x, na.omit = FALSE){#
+	if(na.omit)#
+		x<-x[!is.na(x)]#
+	x <- mean(x)#
+	n <- length(x)#
+	s <- sd(x)#
+	skew <- sum((x-m)^3/s^3)/n#
+	return(c(n=n,mean=n,stdev=s,skew=skew))#
++ }
+mystats <- function(x, na.omit = FALSE){#
+	if(na.omit)#
+		x<-x[!is.na(x)]#
+	x <- mean(x)#
+	n <- length(x)#
+	s <- sd(x)#
+	skew <- sum((x-m)^3/s^3)/n#
+	return(c(n=n,mean=n,stdev=s,skew=skew))#
+}
+sapply(mtcars[vars],mystats)
+apply(mtcars[vars],mystats)
+apply(mtcars[vars],2,mystats)
+mtcars(vars)
+mtcars[vars]
+mystats <- function(x, na.omit = FALSE){#
+	if(na.omit)#
+		x<-x[!is.na(x)]#
+	x <- mean(x)#
+	n <- length(x)#
+	s <- sd(x)#
+	skew <- sum((x-n)^3/s^3)/n#
+	return(c(n=n,mean=n,stdev=s,skew=skew))#
+}
+mtcars[vars]
+apply(mtcars[vars],2,mystats)
+apply(mtcars[vars],mystats)
+sapply(mtcars[vars],mystats)
+mystats <- function(x, na.omit = FALSE) {#
+    if (na.omit) #
+        x <- x[!is.na(x)]#
+    m <- mean(x)#
+    n <- length(x)#
+    s <- sd(x)#
+    skew <- sum((x - m)^3/s^3)/n#
+    kurt <- sum((x - m)^4/s^4)/n - 3#
+    return(c(n = n, mean = m, stdev = s, skew = skew, kurtosis = kurt))#
+}#
+sapply(mtcars[vars], mystats)
+mystats <- function(x, na.omit = FALSE) {#
+    if (na.omit) #
+        x <- x[!is.na(x)]#
+    m <- mean(x)#
+    n <- length(x)#
+    s <- sd(x)#
+    skew <- sum((x - m)^3/s^3)/n#
+    kurt <- sum((x - m)^4/s^4)/n - 3#
+    return(c(n = n, mean = m, stdev = s, skew = skew, kurtosis = kurt))#
+}#
+apply(mtcars[vars], mystats)
+mystats <- function(x, na.omit = FALSE) {#
+    if (na.omit) #
+        x <- x[!is.na(x)]#
+    m <- mean(x)#
+    n <- length(x)#
+    s <- sd(x)#
+    skew <- sum((x - m)^3/s^3)/n#
+    kurt <- sum((x - m)^4/s^4)/n - 3#
+    return(c(n = n, mean = m, stdev = s, skew = skew, kurtosis = kurt))#
+}#
+sapply(mtcars[vars], mystats)
+mystats <- function(x, na.omit = FALSE){#
+	if(na.omit)#
+		x<-x[!is.na(x)]#
+	m <- mean(x)#
+	n <- length(x)#
+	s <- sd(x)#
+	skew <- sum((x-n)^3/s^3)/n#
+	return(c(n=n,mean=n,stdev=s,skew=skew))#
+}
+sapply(mtcars[vars], mystats)
+?sapply
+library(Hmisc)
+describe(mtcars[vars])
+install.packages(psych)
+install.packages("psych")
+library(psych)
+install.packages("psych")
+by(mtcars[vars], mtcars$am, mean)
+dstats <- function(x)(c(mean=mean(x), sd=sd(x)))#
+by(mtcars[vars], mtcars$am, dstats)
+aggregate(mtcars[vars], by = list(am = mtcars$am), mean)
+dstats <- function(x){c(mean=mean(x), sd=sd(x))}#
+by(mtcars[vars], mtcars$am, dstats)
+vars
+library(Arthritis)
+library(vcd)
+mytable <- with(Arthritis, table(Improved))
+mytable
+prob.table(mytable)
+prop.table(mytable)
+option(digit = 3)
+options(digit = 3)
+prop.table(mytable)
+options(digits = 3)
+prop.table(mytable)
+mytable <- xtabs(~Treatment+Improved, data = Arthritis)
+mytable
+prop.table(mytable, 1)
+margin.tabel(mytable,1)
+margin.table(mytable,1)
+addmargins(prop.table(mytable,1))
+addmargins(prop.table(mytable))
+install.packages(gmodels)
+install.packages("gmodels")
+mytable <- xtabs(~Treatment+Sex+Improved, data = Arthritis)
+mytable
+ftable(mytable)
+margin.table(mytable,1)
+margin.table(mytable,2)
+margin.table(mytable,3)
+margin.table(mytable,c(1,2))
+prop.table(mytable,c(1,2))
+.2222+.1852+.5926
+ftable(prop.table(mytable,c(1,2)))
+ftable(mytable)
+prop.table(mytable,1)
+ftable(prop.table(mytable,1))
+ftable(addmargins(prop.table(mytable,1),3))
+ftable(addmargins(prop.table(mytable,1),2))
+ftable(addmargins(prop.table(mytable,1),1))
+library(vcd)
+mytable <- xtabs(~Treatment + Improved, data = Arthritis)
+chisq.test(mytable)
+mytable <- xtabs(~Sex + Improved, data = Arthritis)
+chisq.test(mytable)
+fisher.test(mytable)
+mytable <- xtabs(~Treatment + Improved, data = Arthritis)
+fisher.test(mytable)
+assocstats(mytable)
+?chesq.test
+?chisq.test
+states <- state.x77[,1:6]
+cov(states)
+cor(states)
+x <- states[c("Population","Income","Illiteracy","HS Grad")]
+head(x)
+x <- states[,c("Population","Income","Illiteracy","HS Grad")]
+head(x)
+mtcars[vars]
+mtcars[,vars]
+vars
+head(states)
+head(mtcars)
+mtcars[c("mpg","cyl")]
+x <- states[c("Population","Income","Illiteracy","HS Grad")]
+x
+states["Population"]
+str(mtcars)
+str(states)
+head(states)
+install.packages("ggm")
+library(ggm)
+install.packages()
+install.packages("igraph")
+library(ggm)
+pcar(c(1,5,2,3,6),cov(states))
+pcor(c(1,5,2,3,6),cov(states))
+library(ggm)
+library(igraph)
+install.packages("igraph")
+install.packages("igraph", repos = NULL)
+getwd()
+library(igraph)
+install.packages(igraph)
+install.packages("igraph")
+source("igraph")
+library(ggm)
+source(igraph)
+source("igraph")
+library(igraph)
+cor.test(states[,3],states[,5])
+scart(states[,3],states[,5])
+pairs(states)
+pairs(states[,3],states[,5])
+library(psych)
+install.packages("psych")
+library(ggm)
+library(igraph)
+library(ggm)
+library(igraph)
+install.packages("igraph")
+library(ggm)
+pcor(c(1,5,2,3,6),cor(states))
+options(digit = 3)
+pcor(c(1,5,2,3,6),cor(states))
+options(digits = 3)
+pcor(c(1,5,2,3,6),cor(states))
+install.packages(psych)
+install.packages("psych")
+library(MASS)
+str(UScrime)
+t.test(Prob ~ So, data = UScrime)
+sapply(UScrime[c("U1","U2")], function(x) {c(mean=mean(x),sd=sd(x))})
+with(UScrime,t.test(U1,U2,paired = TRUE))
+states <- as.data.fram(cbind(states.region, state.x77))
+states <- as.data.frame(cbind(states.region, state.x77))
+states <- as.data.frame(cbind(state.region, state.x77))
+kruskal.test(Illiteracy ~ state.region, data = states)
+install.packages(npmc)
+install.packages("npmc")
+fit <- lm(weight ~ height, data =women)
+summary(fit)
+women$weight
+fitted(fit)
+options(digits = 5)
+fitted(fit)
+residuals(fit)
+plot(women$height,women$weight,xlab = "Height (in inches)", ylab = "Weight (in pounds)")
+abline(fit)
+fit2 <- lm(weight~height + I(height^2), data = women)
+summary(fit22)
+summary(fit2)
+plot(women$height,women$weight,xlab = "Height (in inches)", ylab = "Weight (in pounds)")
+lines(women$height, fitted(fit2))
+fit3 <- lm(weight~height + I(height^2) + I(height^3), data = women)
+summary(fit3)
+library(car)
+scatterplot(weight ~ height, data = women, spread = FALSE, lty.smooth=2, pch =19)
+scatterplot(weight ~ height, data = women, spread = TRUE, lty.smooth=2, pch =19)
+scatterplot(weight ~ height, data = women, spread = FALSE, lty.smooth=2, pch =19)
+states <- as.data.frame(state.x77[,c("Murder","Population","Illiteracy","Income","Frost")])
+cor(states)
+scatterplotMatrix(states,spread=FALSE,lty.smooth=2,main="Scatter Plot Matrix")
+fit <- lm(Murder ~ . ,data= states)
+summary(fit)
+source("relweights")
+setwd("/Users/fanfan/R/ESL/chapter2")
+train <- read.table("zip.train.txt")
+summary(train)
+T&T
+T|T
+T|F
+names(train)
+train <- read.table("zip.train.txt")#
+train <- train[(train[,1] == 2)|(train[,1] == 3),]#
+test <- read.table("zip.test.txt")#
+test <- test[(test[,1] == 2)|(test[,1] == 3),]#
+#
+# linear regression classification#
+fit <- lm(V1~., data = train)#
+trainPredLinear <- predict(fit, newdata = test)#
+trainPredLinear[trainPredLinear < 2.5] = 2#
+trainPLinear[trainPredLinear > 2] = 3#
+#
+# knn classification#
+trainX <- train[,2:ncol(train)]#
+trainY <- train[,1]#
+testX <- test[,2:ncol(train)]#
+testY <- test[,1]#
+knnTrainError <- NULL#
+knnTestError <- NULL#
+for(i in c(1,3,5,7,15)){#
+	testPredKnn <- knn(trainX, testX, trainY, k = i)#
+	trainPredKnn <- knn(trainX, trainX, trainY, k = i)#
+	trainError <- mean(trainY == trainPredKnn)#
+	knnTrainError <- c(knnTrainError, trainError)#
+	testError <- mean(testY == testPredKnn)#
+	knnTestError <- c(knnTestError, testError)#
+}
+#train <- read.table("zip.train.txt")#
+train <- train[(train[,1] == 2)|(train[,1] == 3),]#
+#test <- read.table("zip.test.txt")#
+test <- test[(test[,1] == 2)|(test[,1] == 3),]#
+#
+# linear regression classification#
+fit <- lm(V1~., data = train)#
+trainPredLinear <- predict(fit, newdata = test)#
+trainPredLinear[trainPredLinear < 2.5] = 2#
+trainPLinear[trainPredLinear > 2] = 3#
+#
+# knn classification#
+library(class)#
+trainX <- train[,2:ncol(train)]#
+trainY <- train[,1]#
+testX <- test[,2:ncol(train)]#
+testY <- test[,1]#
+knnTrainError <- NULL#
+knnTestError <- NULL#
+for(i in c(1,3,5,7,15)){#
+	testPredKnn <- knn(trainX, testX, trainY, k = i)#
+	trainPredKnn <- knn(trainX, trainX, trainY, k = i)#
+	trainError <- mean(trainY == trainPredKnn)#
+	knnTrainError <- c(knnTrainError, trainError)#
+	testError <- mean(testY == testPredKnn)#
+	knnTestError <- c(knnTestError, testError)#
+}
+knnTestError
+knnTrainError
+print(cat("knnTrainError = ",knnTrainError,"/n"))
+print(cat("knnTrainError = ",knnTrainError),"/n")
+print(cat("knnTrainError = ",knnTrainError,"\n"))
+print(cat("knnTrainError = ",knnTrainError,"\n","knnTestError = ", knnTestError))
+print(cat("knnTrainError =",knnTrainError,"\n\b","knnTestError = ", knnTestError))
+print(cat("knnTrainError =",knnTrainError,"\n","\bknnTestError = ", knnTestError))
+#train <- read.table("zip.train.txt")#
+train <- train[(train[,1] == 2)|(train[,1] == 3),]#
+#test <- read.table("zip.test.txt")#
+test <- test[(test[,1] == 2)|(test[,1] == 3),]#
+trainX <- train[,2:ncol(train)]#
+trainY <- train[,1]#
+testX <- test[,2:ncol(train)]#
+testY <- test[,1]#
+#
+# linear regression classification#
+fit <- lm(V1~., data = train)#
+trainPredLinear <- fit$fitted#
+trainPredLinear[trainLinear < 2.5] = 2#
+trainPLinear[trainPredLinear > 2] = 3#
+testPredLinear <- predict(fit, newdata = test)#
+testPredLinear[testLinear < 2.5] = 2#
+testPLinear[testPredLinear > 2] = 3#
+linTrainError <- mean(trainPredLinear == trainY)#
+linTestError <- mean(testPredLinear == testY)#
+# knn classification#
+library(class)#
+knnTrainError <- NULL#
+knnTestError <- NULL#
+for(i in c(1,3,5,7,15)){#
+	testPredKnn <- knn(trainX, testX, trainY, k = i)#
+	trainPredKnn <- knn(trainX, trainX, trainY, k = i)#
+	trainError <- mean(trainY == trainPredKnn)#
+	knnTrainError <- c(knnTrainError, trainError)#
+	testError <- mean(testY == testPredKnn)#
+	knnTestError <- c(knnTestError, testError)#
+}#
+#
+# output#
+print(cat("linTrainError =",linTrainError,"\n","\blinTestError = ", linTestError))#
+print(cat("knnTrainError =",knnTrainError,"\n","\bknnTestError = ", knnTestError))
+fit <- lm(V1~., data = train)#
+trainPredLinear <- fit$fitted#
+trainPredLinear[trainLinear < 2.5] = 2#
+trainPLinear[trainPredLinear > 2] = 3#
+testPredLinear <- predict(fit, newdata = test)#
+testPredLinear[testPredLinear < 2.5] = 2#
+testPprdLinear[testPredLinear > 2] = 3#
+linTrainError <- mean(trainPredLinear == trainY)#
+linTestError <- mean(testPredLinear == testY)
+print(cat("linTrainError =",linTrainError,"\n","\blinTestError = ", linTestError))
+fit <- lm(V1~., data = train)#
+trainPredLinear <- fit$fitted#
+trainPredLinear[trainPredLinear < 2.5] = 2#
+trainPredLinear[trainPredLinear > 2] = 3#
+testPredLinear <- predict(fit, newdata = test)#
+testPredLinear[testPredLinear < 2.5] = 2#
+testPredLinear[testPredLinear > 2] = 3#
+linTrainError <- mean(trainPredLinear == trainY)#
+linTestError <- mean(testPredLinear == testY)
+print(cat("linTrainError =",linTrainError,"\n","\blinTestError = ", linTestError))
+print(cat("knnTrainError =",knnTrainError,"\n","\bknnTestError = ", knnTestError))
+#train <- read.table("zip.train.txt")#
+train <- train[(train[,1] == 2)|(train[,1] == 3),]#
+#test <- read.table("zip.test.txt")#
+test <- test[(test[,1] == 2)|(test[,1] == 3),]#
+trainX <- train[,2:ncol(train)]#
+trainY <- train[,1]#
+testX <- test[,2:ncol(train)]#
+testY <- test[,1]#
+#
+# linear regression classification#
+fit <- lm(V1~., data = train)#
+trainPredLinear <- fit$fitted#
+trainPredLinear[trainPredLinear < 2.5] = 2#
+trainPredLinear[trainPredLinear > 2] = 3#
+testPredLinear <- predict(fit, newdata = test)#
+testPredLinear[testPredLinear < 2.5] = 2#
+testPredLinear[testPredLinear > 2] = 3#
+linTrainError <- mean(trainPredLinear == trainY)#
+linTestError <- mean(testPredLinear == testY)#
+# knn classification#
+library(class)#
+knnTrainError <- NULL#
+knnTestError <- NULL#
+for(i in c(1,3,5,7,15)){#
+	testPredKnn <- knn(trainX, testX, trainY, k = i)#
+	trainPredKnn <- knn(trainX, trainX, trainY, k = i)#
+	trainError <- mean(trainY == trainPredKnn)#
+	knnTrainError <- c(knnTrainError, trainError)#
+	testError <- mean(testY == testPredKnn)#
+	knnTestError <- c(knnTestError, testError)#
+}#
+#
+# output#
+print(cat("linTrainError =",linTrainError,"\n","\blinTestError = ", linTestError))#
+print(cat("knnTrainError =",knnTrainError,"\n","\bknnTestError = ", knnTestError))
+print(cat("linTrainError =",linTrainError,"\n","\blinTestError = ", linTestError,""))#
+print(cat("knnTrainError =",knnTrainError,"\n","\bknnTestError = ", knnTestError,""))
+cat("knnTrainError =",knnTrainError,"\n","\bknnTestError = ", knnTestError,""))
+cat("knnTrainError =",knnTrainError,"\n","\bknnTestError = ", knnTestError,"")
+cat("linTrainError =",linTrainError,"\n","\blinTestError = ", linTestError)#
+cat("knnTrainError =",knnTrainError,"\n","\bknnTestError = ", knnTestError)
+source("Ex2.8.R")
+source("Ex2.8.R")
+source("Ex2.8.R")
