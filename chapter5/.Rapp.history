@@ -1,0 +1,2191 @@
+quantile(1:10, probs = 0.2)
+quantile(1:10, probs = 0.3)
+quantile(1:10, probs = 1)
+quantile(x, probs = c(0.33, 0.66))
+help(cut)
+cut(x, breaks = 3)
+cut(x, breaks = quantile(x, probs = c(0.33, 0.67)))
+help(cut)
+cut(x, breaks = quantile(x, probs = c(0, 0.33, 0.67, 1)))
+FALSE&TRUE
+TRUE&TRUE
+# Generate data for Fig5.1 Fig5.2#
+x <- seq(-1, 8, by=0.1)#
+n <- length(x)#
+eps <- 0.2*rnorm(n)#
+y <- cos(x) + eps#
+plot(x, y, lwd = 1)#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+# plot 5.1(a)#
+mean1 <- mean(y[index1])#
+mean2 <- mean(y[index2])#
+mean3 <- mean(y[index3])#
+plot(x, y, lwd = 1)#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, rep(mean1, length(x1)), col = "green", type = "l", lwd = 2)
+# Generate data for Fig5.1 Fig5.2#
+x <- seq(-1, 8, by=0.1)#
+n <- length(x)#
+eps <- 0.2*rnorm(n)#
+y <- cos(x) + eps#
+plot(x, y, lwd = 1)#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+# plot 5.1(a)#
+mean1 <- mean(y[index1])#
+mean2 <- mean(y[index2])#
+mean3 <- mean(y[index3])#
+plot(x, y, lwd = 1)#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, rep(mean1, length(x1)), col = "green", type = "l", lwd = 2)#
+lines(x2, rep(mean2, length(x2)), col = "green", type = "l", lwd = 2)#
+lines(x3, rep(mean3, length(x3)), col = "green", type = "l", lwd = 2)
+# Generate data for Fig5.1 Fig5.2#
+x <- seq(-1, 8, by=0.1)#
+n <- length(x)#
+eps <- 0.2*rnorm(n)#
+y <- cos(x) + eps#
+plot(x, y, lwd = 1)#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+# plot 5.1(a)#
+mean1 <- mean(y[index1])#
+mean2 <- mean(y[index2])#
+mean3 <- mean(y[index3])#
+plot(x, y, lwd = 1, main = "Piecewise Constant")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, rep(mean1, length(x1)), col = "green", type = "l", lwd = 2)#
+lines(x2, rep(mean2, length(x2)), col = "green", type = "l", lwd = 2)#
+lines(x3, rep(mean3, length(x3)), col = "green", type = "l", lwd = 2)
+# Generate data for Fig5.1 Fig5.2#
+x <- seq(-1, 8, by=0.1)#
+n <- length(x)#
+eps <- 0.2*rnorm(n)#
+y <- cos(x) + eps#
+plot(x, y, lwd = 1)#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+par(mfrow = c(2,2))#
+# plot 5.1(a)#
+mean1 <- mean(y[index1])#
+mean2 <- mean(y[index2])#
+mean3 <- mean(y[index3])#
+plot(x, y, lwd = 1, main = "Piecewise Constant")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, rep(mean1, length(x1)), col = "green", type = "l", lwd = 2)#
+lines(x2, rep(mean2, length(x2)), col = "green", type = "l", lwd = 2)#
+lines(x3, rep(mean3, length(x3)), col = "green", type = "l", lwd = 2)
+# Generate data for Fig5.1 Fig5.2#
+x <- seq(-1, 8, by=0.1)#
+n <- length(x)#
+eps <- 0.2*rnorm(n)#
+y <- cos(x) + eps#
+plot(x, y, lwd = 1)#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+par(mfrow = c(2,2))#
+# plot 5.1(a)#
+mean1 <- mean(y[index1])#
+mean2 <- mean(y[index2])#
+mean3 <- mean(y[index3])#
+plot(x, y, lwd = 1, main = "Piecewise Constant", ann = FALSE)#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, rep(mean1, length(x1)), col = "green", type = "l", lwd = 2)#
+lines(x2, rep(mean2, length(x2)), col = "green", type = "l", lwd = 2)#
+lines(x3, rep(mean3, length(x3)), col = "green", type = "l", lwd = 2)
+# Generate data for Fig5.1 Fig5.2#
+x <- seq(-1, 8, by=0.1)#
+n <- length(x)#
+eps <- 0.2*rnorm(n)#
+y <- cos(x) + eps#
+plot(x, y, lwd = 1)#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+par(mfrow = c(2,2))#
+# plot 5.1(a)#
+mean1 <- mean(y[index1])#
+mean2 <- mean(y[index2])#
+mean3 <- mean(y[index3])#
+plot(x, y, lwd = 1, ann = FALSE)#
+title(main = "Piecewise Constant")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, rep(mean1, length(x1)), col = "green", type = "l", lwd = 2)#
+lines(x2, rep(mean2, length(x2)), col = "green", type = "l", lwd = 2)#
+lines(x3, rep(mean3, length(x3)), col = "green", type = "l", lwd = 2)
+# Generate data for Fig5.1 Fig5.2#
+x <- seq(-1, 8, by=0.1)#
+n <- length(x)#
+eps <- 0.2*rnorm(n)#
+y <- cos(x) + eps#
+plot(x, y, lwd = 1)#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+par(mfrow = c(2,2))#
+# plot 5.1(a)#
+mean1 <- mean(y[index1])#
+mean2 <- mean(y[index2])#
+mean3 <- mean(y[index3])#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Piecewise Constant")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, rep(mean1, length(x1)), col = "green", type = "l", lwd = 2)#
+lines(x2, rep(mean2, length(x2)), col = "green", type = "l", lwd = 2)#
+lines(x3, rep(mean3, length(x3)), col = "green", type = "l", lwd = 2)
+# Generate data for Fig5.1 Fig5.2#
+x <- seq(-1, 8, by=0.1)#
+n <- length(x)#
+eps <- 0.2*rnorm(n)#
+y <- cos(x) + eps#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+par(mfrow = c(2,2))#
+# plot 5.1(a)#
+mean1 <- mean(y[index1])#
+mean2 <- mean(y[index2])#
+mean3 <- mean(y[index3])#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Piecewise Constant")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, rep(mean1, length(x1)), col = "green", type = "l", lwd = 2)#
+lines(x2, rep(mean2, length(x2)), col = "green", type = "l", lwd = 2)#
+lines(x3, rep(mean3, length(x3)), col = "green", type = "l", lwd = 2)#
+# plot 5.1(b)#
+pl1 <- lm(y[index1]~x1)#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Piecewise Linear")#
+lines(pl1)
+pl1 <- lm(y[index1]~x1)#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Piecewise Linear")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(pl1)
+pl1 <- lm(y[index1]~x1)#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Piecewise Linear")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+abline(pl1)
+names(pl1)
+pl1$coefficients
+rbind(1, 1:10)
+pl1 <- lm(y[index1]~x1)#
+coef1 <- pl1$coefficients#
+X1 <- rbind(1, x1)#
+Y1 <- t(coef1)%*%X1#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Piecewise Linear")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, Y1, col = "green", lwd = 2)
+# Generate data for Fig5.1 Fig5.2#
+x <- seq(-1, 8, by=0.1)#
+n <- length(x)#
+eps <- 0.2*rnorm(n)#
+y <- cos(x) + eps#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+par(mfrow = c(2,2))#
+# plot 5.1(a)#
+mean1 <- mean(y[index1])#
+mean2 <- mean(y[index2])#
+mean3 <- mean(y[index3])#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Piecewise Constant")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, rep(mean1, length(x1)), col = "green", type = "l", lwd = 2)#
+lines(x2, rep(mean2, length(x2)), col = "green", type = "l", lwd = 2)#
+lines(x3, rep(mean3, length(x3)), col = "green", type = "l", lwd = 2)#
+# plot 5.1(b)#
+pl1 <- lm(y[index1]~x1)#
+coef1 <- pl1$coefficients#
+X1 <- rbind(1, x1)#
+Y1 <- t(coef1)%*%X1#
+pl2 <- lm(y[index2]~x2)#
+coef1 <- pl2$coefficients#
+X2 <- rbind(1, x2)#
+Y2 <- t(coef2)%*%X2#
+pl3 <- lm(y[index3]~x3)#
+coef3 <- pl3$coefficients#
+X3 <- rbind(1, x3)#
+Y3 <- t(coef3)%*%X3#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Piecewise Linear")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, Y1, col = "green", lwd = 2)#
+lines(x2, Y2, col = "green", lwd = 2)#
+lines(x3, Y3, col = "green", lwd = 2)
+# Generate data for Fig5.1 Fig5.2#
+x <- seq(-1, 8, by=0.1)#
+n <- length(x)#
+eps <- 0.2*rnorm(n)#
+y <- cos(x) + eps#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+par(mfrow = c(2,2))#
+# plot 5.1(a)#
+mean1 <- mean(y[index1])#
+mean2 <- mean(y[index2])#
+mean3 <- mean(y[index3])#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Piecewise Constant")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, rep(mean1, length(x1)), col = "green", type = "l", lwd = 2)#
+lines(x2, rep(mean2, length(x2)), col = "green", type = "l", lwd = 2)#
+lines(x3, rep(mean3, length(x3)), col = "green", type = "l", lwd = 2)#
+# plot 5.1(b)#
+pl1 <- lm(y[index1]~x1)#
+coef1 <- pl1$coefficients#
+X1 <- rbind(1, x1)#
+Y1 <- t(coef1)%*%X1#
+pl2 <- lm(y[index2]~x2)#
+coef2 <- pl2$coefficients#
+X2 <- rbind(1, x2)#
+Y2 <- t(coef2)%*%X2#
+pl3 <- lm(y[index3]~x3)#
+coef3 <- pl3$coefficients#
+X3 <- rbind(1, x3)#
+Y3 <- t(coef3)%*%X3#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Piecewise Linear")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, Y1, col = "green", lwd = 2)#
+lines(x2, Y2, col = "green", lwd = 2)#
+lines(x3, Y3, col = "green", lwd = 2)
+help(bs)
+cpl <- lm(y~bs(x, knots = quantiles, degree = 1))#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Piecewise Linear")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x, cpl$fitted.values, col = 'green', lwd = 2)
+# Generate data for Fig5.1 Fig5.2#
+x <- seq(-1, 8, by=0.1)#
+n <- length(x)#
+eps <- 0.2*rnorm(n)#
+y <- cos(x) + eps#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+par(mfrow = c(2,2))#
+# plot 5.1(a)#
+mean1 <- mean(y[index1])#
+mean2 <- mean(y[index2])#
+mean3 <- mean(y[index3])#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Piecewise Constant")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, rep(mean1, length(x1)), col = "green", type = "l", lwd = 2)#
+lines(x2, rep(mean2, length(x2)), col = "green", type = "l", lwd = 2)#
+lines(x3, rep(mean3, length(x3)), col = "green", type = "l", lwd = 2)#
+# plot 5.1(b)#
+pl1 <- lm(y[index1]~x1)#
+coef1 <- pl1$coefficients#
+X1 <- rbind(1, x1)#
+Y1 <- t(coef1)%*%X1#
+pl2 <- lm(y[index2]~x2)#
+coef2 <- pl2$coefficients#
+X2 <- rbind(1, x2)#
+Y2 <- t(coef2)%*%X2#
+pl3 <- lm(y[index3]~x3)#
+coef3 <- pl3$coefficients#
+X3 <- rbind(1, x3)#
+Y3 <- t(coef3)%*%X3#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Piecewise Linear")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, Y1, col = "green", lwd = 2)#
+lines(x2, Y2, col = "green", lwd = 2)#
+lines(x3, Y3, col = "green", lwd = 2)#
+# plot 5.1(c)#
+cpl <- lm(y~bs(x, knots = quantiles, degree = 1))#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Continuous Piecewise Linear")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x, cpl$fitted.values, col = 'green', lwd = 2)
+# Generate data for Fig5.1 Fig5.2#
+x <- seq(-1, 7, by=0.1)#
+n <- length(x)#
+eps <- 0.2*rnorm(n)#
+y <- cos(x) + eps#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+par(mfrow = c(2,2))#
+# plot 5.1(a)#
+mean1 <- mean(y[index1])#
+mean2 <- mean(y[index2])#
+mean3 <- mean(y[index3])#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Piecewise Constant")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, rep(mean1, length(x1)), col = "green", type = "l", lwd = 2)#
+lines(x2, rep(mean2, length(x2)), col = "green", type = "l", lwd = 2)#
+lines(x3, rep(mean3, length(x3)), col = "green", type = "l", lwd = 2)#
+# plot 5.1(b)#
+pl1 <- lm(y[index1]~x1)#
+coef1 <- pl1$coefficients#
+X1 <- rbind(1, x1)#
+Y1 <- t(coef1)%*%X1#
+pl2 <- lm(y[index2]~x2)#
+coef2 <- pl2$coefficients#
+X2 <- rbind(1, x2)#
+Y2 <- t(coef2)%*%X2#
+pl3 <- lm(y[index3]~x3)#
+coef3 <- pl3$coefficients#
+X3 <- rbind(1, x3)#
+Y3 <- t(coef3)%*%X3#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Piecewise Linear")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, Y1, col = "green", lwd = 2)#
+lines(x2, Y2, col = "green", lwd = 2)#
+lines(x3, Y3, col = "green", lwd = 2)#
+# plot 5.1(c)#
+cpl <- lm(y~bs(x, knots = quantiles, degree = 1))#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Continuous Piecewise Linear")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x, cpl$fitted.values, col = 'green', lwd = 2)
+# Generate data#
+set.seed(1)#
+x <- seq(-1, 7, by=0.1)#
+n <- length(x)#
+eps <- 0.2*rnorm(n)#
+y <- cos(x) + eps#
+#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+par(mfrow = c(2,2))#
+# plot 5.2(a)#
+disc_cubic_spline1 <- lm(y[index1]~poly(x1, 3))#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Discontinuous")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, disc_cubic_spline1$fitted.values, col = 'green', lwd = 2)
+# Generate data#
+set.seed(1)#
+x <- seq(-1, 7, by=0.1)#
+n <- length(x)#
+eps <- 0.2*rnorm(n)#
+y <- cos(x) + eps#
+#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+par(mfrow = c(2,2))#
+# plot 5.2(a)#
+disc_cubic_spline1 <- lm(y[index1]~poly(x1, 3))#
+disc_cubic_spline2 <- lm(y[index2]~poly(x2, 3))#
+disc_cubic_spline3 <- lm(y[index3]~poly(x3, 3))#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Discontinuous")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, disc_cubic_spline1$fitted.values, col = 'green', lwd = 2)#
+lines(x2, disc_cubic_spline2$fitted.values, col = 'green', lwd = 2)#
+lines(x3, disc_cubic_spline3$fitted.values, col = 'green', lwd = 2)
+randperm
+??perm
+# Generate data#
+set.seed(1)#
+x <- seq(-1, 7, by=0.1)#
+n <- length(x)#
+eps <- sample(abs(x), length(x))*rnorm(n)#
+y <- cos(x) + eps#
+#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+par(mfrow = c(2,2))#
+# plot 5.2(a)#
+disc_cubic_spline1 <- lm(y[index1]~poly(x1, 3))#
+disc_cubic_spline2 <- lm(y[index2]~poly(x2, 3))#
+disc_cubic_spline3 <- lm(y[index3]~poly(x3, 3))#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Discontinuous")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, disc_cubic_spline1$fitted.values, col = 'green', lwd = 2)#
+lines(x2, disc_cubic_spline2$fitted.values, col = 'green', lwd = 2)#
+lines(x3, disc_cubic_spline3$fitted.values, col = 'green', lwd = 2)
+# Generate data#
+set.seed(1)#
+x <- seq(-1, 7, by=0.1)#
+n <- length(x)#
+eps <- sample(0.1*abs(x), length(x))*rnorm(n)#
+y <- cos(x) + eps#
+#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+par(mfrow = c(2,2))#
+# plot 5.2(a)#
+disc_cubic_spline1 <- lm(y[index1]~poly(x1, 3))#
+disc_cubic_spline2 <- lm(y[index2]~poly(x2, 3))#
+disc_cubic_spline3 <- lm(y[index3]~poly(x3, 3))#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Discontinuous")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, disc_cubic_spline1$fitted.values, col = 'green', lwd = 2)#
+lines(x2, disc_cubic_spline2$fitted.values, col = 'green', lwd = 2)#
+lines(x3, disc_cubic_spline3$fitted.values, col = 'green', lwd = 2)
+# Generate data#
+set.seed(1)#
+x <- seq(-1, 7, by=0.1)#
+n <- length(x)#
+eps <- sample(0.5*abs(x), length(x))*rnorm(n)#
+y <- cos(x) + eps#
+#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+par(mfrow = c(2,2))#
+# plot 5.2(a)#
+disc_cubic_spline1 <- lm(y[index1]~poly(x1, 3))#
+disc_cubic_spline2 <- lm(y[index2]~poly(x2, 3))#
+disc_cubic_spline3 <- lm(y[index3]~poly(x3, 3))#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Discontinuous")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, disc_cubic_spline1$fitted.values, col = 'green', lwd = 2)#
+lines(x2, disc_cubic_spline2$fitted.values, col = 'green', lwd = 2)#
+lines(x3, disc_cubic_spline3$fitted.values, col = 'green', lwd = 2)
+# Generate data#
+set.seed(1)#
+x <- seq(-1, 7, by=0.1)#
+n <- length(x)#
+eps <- sample(0.3*abs(x), length(x))*rnorm(n)#
+y <- cos(x) + eps#
+#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+par(mfrow = c(2,2))#
+# plot 5.2(a)#
+disc_cubic_spline1 <- lm(y[index1]~poly(x1, 3))#
+disc_cubic_spline2 <- lm(y[index2]~poly(x2, 3))#
+disc_cubic_spline3 <- lm(y[index3]~poly(x3, 3))#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Discontinuous")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, disc_cubic_spline1$fitted.values, col = 'green', lwd = 2)#
+lines(x2, disc_cubic_spline2$fitted.values, col = 'green', lwd = 2)#
+lines(x3, disc_cubic_spline3$fitted.values, col = 'green', lwd = 2)
+x_knot1 <- x - quantiles[1]#
+x_knot1[x_knot1 < 0] <- 0#
+x_knot2 <- x - quantiles[2]#
+x_knot2[x_knot2 < 0] <- 0#
+X = data.frame(h1 = rep(1, length(x)), h2 = x, h3 = x^2, h4 = x^3, h5 = x_knot1^3, h6 = x_knot2^3, h7 = x_knot1^2, h8 = x_knot2^2,#
+				h9 = x_knot1, h10 = x_knot2, y = y)#
+# plot 5.2(b)#
+conFit <- lm(y~.-1, data = X)#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Discontinuous")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x, conFit$fitted.values, col = 'green', lwd = 2)
+# Generate data#
+set.seed(1)#
+x <- seq(-1, 7, by=0.1)#
+n <- length(x)#
+eps <- sample(0.3*abs(x), length(x))*rnorm(n)#
+y <- cos(x) + eps#
+#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+par(mfrow = c(2,2))#
+# plot 5.2(a)#
+disc_cubic_spline1 <- lm(y[index1]~poly(x1, 3))#
+disc_cubic_spline2 <- lm(y[index2]~poly(x2, 3))#
+disc_cubic_spline3 <- lm(y[index3]~poly(x3, 3))#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Discontinuous")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, disc_cubic_spline1$fitted.values, col = 'green', lwd = 2)#
+lines(x2, disc_cubic_spline2$fitted.values, col = 'green', lwd = 2)#
+lines(x3, disc_cubic_spline3$fitted.values, col = 'green', lwd = 2)#
+# generate data frame for continuous splines#
+x_knot1 <- x - quantiles[1]#
+x_knot1[x_knot1 < 0] <- 0#
+x_knot2 <- x - quantiles[2]#
+x_knot2[x_knot2 < 0] <- 0#
+X = data.frame(h1 = rep(1, length(x)), h2 = x, h3 = x^2, h4 = x^3, h5 = x_knot1^3, h6 = x_knot2^3, h7 = x_knot1^2, h8 = x_knot2^2,#
+				h9 = x_knot1, h10 = x_knot2, y = y)#
+# plot 5.2(b)#
+conFit <- lm(y~.-1, data = X)#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Discontinuous")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x, conFit$fitted.values, col = 'green', lwd = 2)#
+# plot 5.2(c)#
+conFisderFit <- lm(y~.-1-h9-h10, data = X)#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Discontinuous")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x, conFisderFit$fitted.values, col = 'green', lwd = 2)#
+# plot 5.2(d)#
+conSecderFit <- lm(y~.-1-h9-h10-h7-h8, data = X)#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Discontinuous")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x, conSecderFit$fitted.values, col = 'green', lwd = 2)
+# Generate data#
+set.seed(1)#
+x <- seq(-1, 7, by=0.1)#
+n <- length(x)#
+eps <- sample(0.3*abs(x), length(x))*rnorm(n)#
+y <- cos(x) + eps#
+#
+quantiles <- quantile(x, probs = c(0.33, 0.67))#
+index1 <- x < quantiles[1]#
+x1 <- x[index1]#
+index2 <- (x >= quantiles[1])&(x < quantiles[2])#
+x2 <- x[index2]#
+index3 <- (x > quantiles[2])#
+x3 <- x[index3]#
+#
+par(mfrow = c(2,2))#
+# plot 5.2(a)#
+disc_cubic_spline1 <- lm(y[index1]~poly(x1, 3))#
+disc_cubic_spline2 <- lm(y[index2]~poly(x2, 3))#
+disc_cubic_spline3 <- lm(y[index3]~poly(x3, 3))#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Discontinuous")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x1, disc_cubic_spline1$fitted.values, col = 'green', lwd = 2)#
+lines(x2, disc_cubic_spline2$fitted.values, col = 'green', lwd = 2)#
+lines(x3, disc_cubic_spline3$fitted.values, col = 'green', lwd = 2)#
+# generate data frame for continuous splines#
+x_knot1 <- x - quantiles[1]#
+x_knot1[x_knot1 < 0] <- 0#
+x_knot2 <- x - quantiles[2]#
+x_knot2[x_knot2 < 0] <- 0#
+X = data.frame(h1 = rep(1, length(x)), h2 = x, h3 = x^2, h4 = x^3, h5 = x_knot1^3, h6 = x_knot2^3, h7 = x_knot1^2, h8 = x_knot2^2,#
+				h9 = x_knot1, h10 = x_knot2, y = y)#
+# plot 5.2(b)#
+conFit <- lm(y~.-1, data = X)#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Continuous")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x, conFit$fitted.values, col = 'green', lwd = 2)#
+# plot 5.2(c)#
+conFisderFit <- lm(y~.-1-h9-h10, data = X)#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Continuous First Derivative")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x, conFisderFit$fitted.values, col = 'green', lwd = 2)#
+# plot 5.2(d)#
+conSecderFit <- lm(y~.-1-h9-h10-h7-h8, data = X)#
+plot(x, y, lwd = 1, ann = FALSE, xaxt = 'n', yaxt = 'n')#
+title(main = "Continuous Second Derivative")#
+lines(x, cos(x), col = "blue", type = "l", lwd = 2)#
+abline(v = quantiles, lty = 2)#
+lines(x, conSecderFit$fitted.values, col = 'green', lwd = 2)
+library(stats)
+fix(X)
+head(X)
+# Polynomial Regression and Step Functions#
+library(ISLR)#
+attach(Wage)#
+fit = lm(wage~poly(age, 4), data = Wage)#
+# The poly() command allows us to avoid having to write out a long formula with powers of age.#
+# The function returns a matrix whose columns are a basis of orthogonal polynomials.#
+coef(summary(fit))#
+#
+# we can also use poly() to obtain age, age^2, age^3 directly. We can do this by using the raw = TRUE#
+fit2 = lm(wage~poly(age, 4, raw = T), data = Wage)#
+coef(summary(fit2))#
+# There are several other equvalent ways of fitting this model#
+fit2a = lm(wage ~ age + I(age^2) + I(age^3) + I(age^4), data = Wage)#
+# Takeing care to protect terms like age^2 via the wrapper function I(), the ^ symbol has a sepcial meaning in formual#
+coef(fit2a)#
+#
+# any function call cbind() inside a formula also serves as a wrapper#
+fit2b = lm(wage ~ cbind(age, age^2, age^3, age^4), data = Wage)
+coef(fit2b)
+# Polynomial Regression and Step Functions#
+library(ISLR)#
+attach(Wage)#
+fit = lm(wage~poly(age, 4), data = Wage)#
+# The poly() command allows us to avoid having to write out a long formula with powers of age.#
+# The function returns a matrix whose columns are a basis of orthogonal polynomials.#
+coef(summary(fit))#
+#
+# we can also use poly() to obtain age, age^2, age^3 directly. We can do this by using the raw = TRUE#
+fit2 = lm(wage~poly(age, 4, raw = T), data = Wage)#
+coef(summary(fit2))#
+# There are several other equvalent ways of fitting this model#
+fit2a = lm(wage ~ age + I(age^2) + I(age^3) + I(age^4), data = Wage)#
+# Takeing care to protect terms like age^2 via the wrapper function I(), the ^ symbol has a sepcial meaning in formual#
+coef(fit2a)#
+#
+# any function call cbind() inside a formula also serves as a wrapper#
+fit2b = lm(wage ~ cbind(age, age^2, age^3, age^4), data = Wage)#
+#
+# We now create a grid of values for age at which we want predictions, and the call the generic predict() function,#
+# specifying that we want standard errors as well#
+agelims = range(age)#
+age.grid = seq(from = agelims[1], to = agelims[2])#
+preds = predict(fit, newata= list(age = age.grid), se = TRUE)#
+se.bands = cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)#
+par(mfrow = c(1,2), mar = c(4.5, 4.5, 1, 1), oma = c(0, 0, 4, 0))#
+plot(age, wage, xlim = agelims, cex = .5, col = 'darkgrey')#
+title('Degree-4 Polynomial', outer = T)#
+lines(age.agrid, preds$fit, lwd = 2, col = 'blue')#
+matlines(age.grid, se.bands, lwd = 1, col = "blue", lty = 3)
+# Polynomial Regression and Step Functions#
+library(ISLR)#
+attach(Wage)#
+fit = lm(wage~poly(age, 4), data = Wage)#
+# The poly() command allows us to avoid having to write out a long formula with powers of age.#
+# The function returns a matrix whose columns are a basis of orthogonal polynomials.#
+coef(summary(fit))#
+#
+# we can also use poly() to obtain age, age^2, age^3 directly. We can do this by using the raw = TRUE#
+fit2 = lm(wage~poly(age, 4, raw = T), data = Wage)#
+coef(summary(fit2))#
+# There are several other equvalent ways of fitting this model#
+fit2a = lm(wage ~ age + I(age^2) + I(age^3) + I(age^4), data = Wage)#
+# Takeing care to protect terms like age^2 via the wrapper function I(), the ^ symbol has a sepcial meaning in formual#
+coef(fit2a)#
+#
+# any function call cbind() inside a formula also serves as a wrapper#
+fit2b = lm(wage ~ cbind(age, age^2, age^3, age^4), data = Wage)#
+#
+# We now create a grid of values for age at which we want predictions, and the call the generic predict() function,#
+# specifying that we want standard errors as well#
+agelims = range(age)#
+age.grid = seq(from = agelims[1], to = agelims[2])#
+preds = predict(fit, newata= list(age = age.grid), se = TRUE)#
+se.bands = cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)#
+par(mfrow = c(1,2), mar = c(4.5, 4.5, 1, 1), oma = c(0, 0, 4, 0))#
+plot(age, wage, xlim = agelims, cex = .5, col = 'darkgrey')#
+title('Degree-4 Polynomial', outer = T)#
+lines(age.grid, preds$fit, lwd = 2, col = 'blue')#
+matlines(age.grid, se.bands, lwd = 1, col = "blue", lty = 3)
+# Polynomial Regression and Step Functions#
+library(ISLR)#
+attach(Wage)#
+fit = lm(wage~poly(age, 4), data = Wage)#
+# The poly() command allows us to avoid having to write out a long formula with powers of age.#
+# The function returns a matrix whose columns are a basis of orthogonal polynomials.#
+coef(summary(fit))#
+#
+# we can also use poly() to obtain age, age^2, age^3 directly. We can do this by using the raw = TRUE#
+fit2 = lm(wage~poly(age, 4, raw = T), data = Wage)#
+coef(summary(fit2))#
+# There are several other equvalent ways of fitting this model#
+fit2a = lm(wage ~ age + I(age^2) + I(age^3) + I(age^4), data = Wage)#
+# Takeing care to protect terms like age^2 via the wrapper function I(), the ^ symbol has a sepcial meaning in formual#
+coef(fit2a)#
+#
+# any function call cbind() inside a formula also serves as a wrapper#
+fit2b = lm(wage ~ cbind(age, age^2, age^3, age^4), data = Wage)#
+#
+# We now create a grid of values for age at which we want predictions, and the call the generic predict() function,#
+# specifying that we want standard errors as well#
+agelims = range(age)#
+age.grid = seq(from = agelims[1], to = agelims[2])#
+preds = predict(fit, newdata= list(age = age.grid), se = TRUE)#
+se.bands = cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)#
+par(mfrow = c(1,2), mar = c(4.5, 4.5, 1, 1), oma = c(0, 0, 4, 0))#
+plot(age, wage, xlim = agelims, cex = .5, col = 'darkgrey')#
+title('Degree-4 Polynomial', outer = T)#
+lines(age.grid, preds$fit, lwd = 2, col = 'blue')#
+matlines(age.grid, se.bands, lwd = 1, col = "blue", lty = 3)
+fit = glm(I(wage > age) ~ poly(age, 4), data = Wage, family = binomial)#
+preds = predict(fit, newdata = list(age = age.grid), se = T)#
+# Calculating the confidence intervals is slightly more involved than in the linear regression case. The default prediction #
+# type for a glm() model is type = "link", this means we get predictions for the logit#
+pfit = exp(preds$fit)/(1+exp(preds$fit))#
+se.bands.logit = cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)#
+se.bands = exp(se.bands.logit)/(1+exp(se.bans.logit))#
+# Note that we could have directly computed the probabilities by selecting the type = "response" option in the predict() function.#
+preds = predict(fit, newdata = list(age = age.grid), type = "response", se = T)#
+# However, the corresponding confidence intervals would not have been sensible because we would end up with negative probabilities!#
+plot(age, I(wage > 250), xlim = agelims, type = "n", ylim = c(0, .2))
+fit = glm(I(wage > age) ~ poly(age, 4), data = Wage, family = binomial)#
+preds = predict(fit, newdata = list(age = age.grid), se = T)#
+# Calculating the confidence intervals is slightly more involved than in the linear regression case. The default prediction #
+# type for a glm() model is type = "link", this means we get predictions for the logit#
+pfit = exp(preds$fit)/(1+exp(preds$fit))#
+se.bands.logit = cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)#
+se.bands = exp(se.bands.logit)/(1+exp(se.bands.logit))#
+# Note that we could have directly computed the probabilities by selecting the type = "response" option in the predict() function.#
+preds = predict(fit, newdata = list(age = age.grid), type = "response", se = T)#
+# However, the corresponding confidence intervals would not have been sensible because we would end up with negative probabilities!#
+plot(age, I(wage > 250), xlim = agelims, type = "n", ylim = c(0, .2))
+points(jitter(age), I((wage>250)/5), cex = .5, pch = "|", col = 'darkgrey')
+lines(age.grid, pfit, lwd = 2, col = "blue")#
+matlines(age.grid, se.bands, lwd = 1, col = "blue", lty = 3)
+fit = glm(I(wage > age) ~ poly(age, 4), data = Wage, family = binomial)#
+preds = predict(fit, newdata = list(age = age.grid), se = T)#
+# Calculating the confidence intervals is slightly more involved than in the linear regression case. The default prediction #
+# type for a glm() model is type = "link", this means we get predictions for the logit#
+pfit = exp(preds$fit)/(1+exp(preds$fit))#
+se.bands.logit = cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)#
+se.bands = exp(se.bands.logit)/(1+exp(se.bands.logit))#
+# Note that we could have directly computed the probabilities by selecting the type = "response" option in the predict() function.#
+preds = predict(fit, newdata = list(age = age.grid), type = "response", se = T)#
+# However, the corresponding confidence intervals would not have been sensible because we would end up with negative probabilities!#
+plot(age, I(wage > 250), xlim = agelims, type = "n", ylim = c(0, .2))#
+points(jitter(age), I((wage>250)/5), cex = .5, pch = "|", col = 'darkgrey')#
+lines(age.grid, pfit, lwd = 2, col = "blue")#
+matlines(age.grid, se.bands, lwd = 1, col = "blue", lty = 3)
+# Polynomial Regression and Step Functions#
+library(ISLR)#
+attach(Wage)#
+fit = lm(wage~poly(age, 4), data = Wage)#
+# The poly() command allows us to avoid having to write out a long formula with powers of age.#
+# The function returns a matrix whose columns are a basis of orthogonal polynomials.#
+coef(summary(fit))#
+#
+# we can also use poly() to obtain age, age^2, age^3 directly. We can do this by using the raw = TRUE#
+fit2 = lm(wage~poly(age, 4, raw = T), data = Wage)#
+coef(summary(fit2))#
+# There are several other equvalent ways of fitting this model#
+fit2a = lm(wage ~ age + I(age^2) + I(age^3) + I(age^4), data = Wage)#
+# Takeing care to protect terms like age^2 via the wrapper function I(), the ^ symbol has a sepcial meaning in formual#
+coef(fit2a)#
+#
+# any function call cbind() inside a formula also serves as a wrapper#
+fit2b = lm(wage ~ cbind(age, age^2, age^3, age^4), data = Wage)#
+#
+# We now create a grid of values for age at which we want predictions, and the call the generic predict() function,#
+# specifying that we want standard errors as well#
+agelims = range(age)#
+age.grid = seq(from = agelims[1], to = agelims[2])#
+preds = predict(fit, newdata= list(age = age.grid), se = TRUE)#
+se.bands = cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)#
+par(mfrow = c(1,2), mar = c(4.5, 4.5, 1, 1), oma = c(0, 0, 4, 0))#
+plot(age, wage, xlim = agelims, cex = .5, col = 'darkgrey')#
+title('Degree-4 Polynomial', outer = T)#
+lines(age.grid, preds$fit, lwd = 2, col = 'blue')#
+matlines(age.grid, se.bands, lwd = 1, col = "blue", lty = 3)#
+#
+# In performing a polynomial regression we must decide on the degree of the polynimial to use#
+# One way to do this is by using hypothesis tests. We use anova() function, in this case, we fit five different models #
+#	and sequentially compare the simpler model to the more complex model.#
+fit.1 = lm(wage ~ age, data = Wage)#
+fit.2 = lm(wage ~ poly(age, 2), data = Wage)#
+fit.3 = lm(wage ~ poly(age, 3), data = Wage)#
+fit.4 = lm(wage ~ poly(age, 4), data = Wage)#
+fit.5 = lm(wage ~ poly(age, 5), data = Wage)#
+anova(fit.1, fit.2, fit.3, fit.4, fit.5)#
+# in this case, instead of using the anova() function, we could have obtained these p-values more succinctly by expoilting #
+# the fact that poly() creates orthogonal polynimials#
+coef(summary(fit.5))#
+# However, the ANOVA method works whether or not we used orthogonal polynomials; it alse works when we have other terms in#
+# the model as well.#
+fit.1 = lm(wage ~ education + age, data = Wage)#
+fit.2 = lm(wage ~ education + poly(age, 2), data = Wage)#
+fit.3 = lm(wage ~ education + poly(age, 3), data = Wage)#
+anova(fit.1, fit.2, fit.3)#
+#
+# As an alternative to using hypothesis tests and ANOVA, we could choose the polynomial degree usding cross-validation#
+#
+# Next we consider the task of prediction whether an individual earns more than $250,000 per year#
+fit = glm(I(wage > age) ~ poly(age, 4), data = Wage, family = binomial)#
+preds = predict(fit, newdata = list(age = age.grid), se = T)#
+# Calculating the confidence intervals is slightly more involved than in the linear regression case. The default prediction #
+# type for a glm() model is type = "link", this means we get predictions for the logit#
+pfit = exp(preds$fit)/(1+exp(preds$fit))#
+se.bands.logit = cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)#
+se.bands = exp(se.bands.logit)/(1+exp(se.bands.logit))#
+# Note that we could have directly computed the probabilities by selecting the type = "response" option in the predict() function.#
+preds = predict(fit, newdata = list(age = age.grid), type = "response", se = T)#
+# However, the corresponding confidence intervals would not have been sensible because we would end up with negative probabilities!#
+plot(age, I(wage > 250), xlim = agelims, type = "n", ylim = c(0, .2))#
+points(jitter(age), I((wage>250)/5), cex = .5, pch = "|", col = 'darkgrey')#
+lines(age.grid, pfit, lwd = 2, col = "blue")#
+matlines(age.grid, se.bands, lwd = 1, col = "blue", lty = 3)
+pfit
+age.grid
+fit=glm(I(wage>250)∼poly(age,4),data=Wage,family=binomial)
+preds=predict(fit,newdata=list(age=age.grid),se=T)
+pfit=exp(preds$fit )/(1+exp(preds$fit ))
+se.bands.logit = cbind(preds$fit+2*preds$se.fit, preds$fit-2*preds$se .fit)
+se.bands.logit = cbind(preds$fit+2*preds$se.fit, preds$fit-2*preds$se.fit)
+se.bands = exp(se.bands.logit)/(1+exp(se.bands.logit))
+plot(age,I(wage>250),xlim=agelims ,type="n",ylim=c(0,.2))
+points(jitter(age), I((wage >250)/5),cex=.5,pch="|",col =" darkgrey ")
+lines(age.grid,pfit,lwd=2, col="blue")
+fit = glm(I(wage > age) ~ poly(age, 4), data = Wage, family = binomial)#
+preds = predict(fit, newdata = list(age = age.grid), se = T)#
+# Calculating the confidence intervals is slightly more involved than in the linear regression case. The default prediction #
+# type for a glm() model is type = "link", this means we get predictions for the logit#
+pfit = exp(preds$fit)/(1+exp(preds$fit))#
+se.bands.logit = cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)#
+se.bands = exp(se.bands.logit)/(1+exp(se.bands.logit))#
+# Note that we could have directly computed the probabilities by selecting the type = "response" option in the predict() function.#
+preds = predict(fit, newdata = list(age = age.grid), type = "response", se = T)#
+# However, the corresponding confidence intervals would not have been sensible because we would end up with negative probabilities!#
+plot(age, I(wage > 250), xlim = agelims, type = "n", ylim = c(0, .2))#
+points(jitter(age), I((wage>250)), cex = .5, pch = "|", col = 'darkgrey')#
+lines(age.grid, pfit, lwd = 2, col = "blue")#
+matlines(age.grid, se.bands, lwd = 1, col = "blue", lty = 3)
+fit = glm(I(wage > age) ~ poly(age, 4), data = Wage, family = binomial)#
+preds = predict(fit, newdata = list(age = age.grid), se = T)#
+# Calculating the confidence intervals is slightly more involved than in the linear regression case. The default prediction #
+# type for a glm() model is type = "link", this means we get predictions for the logit#
+pfit = exp(preds$fit)/(1+exp(preds$fit))#
+se.bands.logit = cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)#
+se.bands = exp(se.bands.logit)/(1+exp(se.bands.logit))#
+# Note that we could have directly computed the probabilities by selecting the type = "response" option in the predict() function.#
+preds = predict(fit, newdata = list(age = age.grid), type = "response", se = T)#
+# However, the corresponding confidence intervals would not have been sensible because we would end up with negative probabilities!#
+plot(age, I(wage > 250), xlim = agelims, type = "n", ylim = c(0, 1))#
+points(jitter(age), I((wage>250)), cex = .5, pch = "|", col = 'darkgrey')#
+lines(age.grid, pfit, lwd = 2, col = "blue")#
+matlines(age.grid, se.bands, lwd = 1, col = "blue", lty = 3)
+preds$fit
+fit = glm(I(wage > 250) ~ poly(age, 4), data = Wage, family = binomial)#
+preds = predict(fit, newdata = list(age = age.grid), se = T)#
+# Calculating the confidence intervals is slightly more involved than in the linear regression case. The default prediction #
+# type for a glm() model is type = "link", this means we get predictions for the logit#
+pfit = exp(preds$fit)/(1+exp(preds$fit))#
+se.bands.logit = cbind(preds$fit + 2*preds$se.fit, preds$fit - 2*preds$se.fit)#
+se.bands = exp(se.bands.logit)/(1+exp(se.bands.logit))#
+# Note that we could have directly computed the probabilities by selecting the type = "response" option in the predict() function.#
+preds = predict(fit, newdata = list(age = age.grid), type = "response", se = T)#
+# However, the corresponding confidence intervals would not have been sensible because we would end up with negative probabilities!#
+plot(age, I(wage > 250), xlim = agelims, type = "n", ylim = c(0, .2))#
+points(jitter(age), I((wage>250)/5), cex = .5, pch = "|", col = 'darkgrey')#
+lines(age.grid, pfit, lwd = 2, col = "blue")#
+matlines(age.grid, se.bands, lwd = 1, col = "blue", lty = 3)
+library(splines)#
+# regression splines can be fit by constructing an appropriate matrix of basis functions.#
+# The bs() function generate the entire matrix of basis functions for splines with the specified set of knots.#
+attach(Wage)#
+agelims = range(age)#
+age.grid = seq(from = agelims[1], to = agelims[2])#
+fit = lm(wage ~ bs(age, knots = c(25, 40, 60)), data = Wage)#
+pred = predict(fit, newdata = list(age = age.grid), se = T)#
+plot(age.grid, wage, col = 'gray')#
+lines(age.grid, pred$fit, lwd = 2)#
+lines(age.grid, pred$fit + 2*pred$se, lty = 'dashed')#
+lines(age.grid, pred$fit - 2*pred$se, lty = 'dashed')
+library(splines)#
+# regression splines can be fit by constructing an appropriate matrix of basis functions.#
+# The bs() function generate the entire matrix of basis functions for splines with the specified set of knots.#
+attach(Wage)#
+agelims = range(age)#
+age.grid = seq(from = agelims[1], to = agelims[2])#
+fit = lm(wage ~ bs(age, knots = c(25, 40, 60)), data = Wage)#
+pred = predict(fit, newdata = list(age = age.grid), se = T)#
+plot(age, wage, col = 'gray')#
+lines(age.grid, pred$fit, lwd = 2)#
+lines(age.grid, pred$fit + 2*pred$se, lty = 'dashed')#
+lines(age.grid, pred$fit - 2*pred$se, lty = 'dashed')
+attr(ns(age, df = 4))
+attr(ns(age, df = 4), 'knots')
+dim(ns(age, df = 4))
+plot(age, wage, xlim = agelims, cex = .5, col = "darkgrey") #
+title("Smoothing Spline")#
+fit = smooth.spline(age, wage, df = 16)#
+fit2 = smooth.splines(age, wage, cv = TRUE)#
+fit2$df #
+lines(fit, col = 'red', lwd = 2)#
+lines(fit2, col = "blue", lwd = 2)
+plot(age, wage, xlim = agelims, cex = .5, col = "darkgrey") #
+title("Smoothing Spline")#
+fit = smooth.spline(age, wage, df = 16)#
+fit2 = smooth.spline(age, wage, cv = TRUE)#
+fit2$df #
+lines(fit, col = 'red', lwd = 2)#
+lines(fit2, col = "blue", lwd = 2)#
+# When we specify df = 16, the function determine which value of lambda leads to 16 degrees of freedom. In the second call to #
+#	smooth.spline, we select the smoothness level by cross-validation
+plot(age, wage, xlim = agelims, cex = .5, col = 'darkgrey')#
+title('Local Regression')#
+fit = loess(wage ~ age, span = .2, data = Wage)#
+fit2 = loess(wage ~ age, span = .5, data = Wage)#
+lines(age.grid, predict(fit, data.frame(age = age.grid)), col = "red", lwd  = 2)#
+lines(age.grid, predict(fit, data.frame(age = age.grid)), col = "blue", lwd = 2)#
+legend('topright', legend = c("Span = 0.2", "Span = 0.5"), col = c("red", "blue"), lty = 1, lwd = 2, cex = .8)
+plot(age, wage, xlim = agelims, cex = .5, col = 'darkgrey')#
+title('Local Regression')#
+fit = loess(wage ~ age, span = .2, data = Wage)#
+fit2 = loess(wage ~ age, span = .5, data = Wage)#
+lines(age.grid, predict(fit, data.frame(age = age.grid)), col = "red", lwd  = 2)#
+lines(age.grid, predict(fit2, data.frame(age = age.grid)), col = "blue", lwd = 2)#
+legend('topright', legend = c("Span = 0.2", "Span = 0.5"), col = c("red", "blue"), lty = 1, lwd = 2, cex = .8)
+# We now fit a GAM to predict wage using natural spline functions of year and age, treating education as a qualitative predictors.#
+library(ISLR)#
+library(splines)#
+attach(Wage)#
+agelims = range(age)#
+age.grid = seq(from = agelims[1], to = agelims[2])#
+gam1 = lm(wage ~ns(year, 4) + ns(age, 5), education, data = Wage)#
+# In order to fit more general sorts of GAMs, using smoothing splines or other components that cannot expressed in terms of basis#
+# functions and then fit using least squares regression, we will need to use the gam library in R #
+# The s() function, which is part of the gam library, is used to indicate that we would like to use a smoothing spline.#
+# We use the gam() function in order to fit a GAM using these components.#
+library(gam)#
+gam.m3 = gam(wage ~ s(year, 4) + s(age, 5) + education, data = Wage)#
+par(mfrow(1,3))#
+plot(gam.m3, se = TRUE, col = "blue")#
+# Even though gam1 is not of class gam but rather of class lm, we can still use plot.gam() on it.#
+plot(gam1, se = T, col = "red")
+# We now fit a GAM to predict wage using natural spline functions of year and age, treating education as a qualitative predictors.#
+library(ISLR)#
+library(splines)#
+attach(Wage)#
+agelims = range(age)#
+age.grid = seq(from = agelims[1], to = agelims[2])#
+gam1 = lm(wage ~ns(year, 4) + ns(age, 5), education, data = Wage)#
+# In order to fit more general sorts of GAMs, using smoothing splines or other components that cannot expressed in terms of basis#
+# functions and then fit using least squares regression, we will need to use the gam library in R #
+# The s() function, which is part of the gam library, is used to indicate that we would like to use a smoothing spline.#
+# We use the gam() function in order to fit a GAM using these components.#
+library(gam)#
+gam.m3 = gam(wage ~ s(year, 4) + s(age, 5) + education, data = Wage)#
+par(mfrow=c(1,3))#
+plot(gam.m3, se = TRUE, col = "blue")#
+# Even though gam1 is not of class gam but rather of class lm, we can still use plot.gam() on it.#
+plot.gam(gam1, se = T, col = "red")
+# We now fit a GAM to predict wage using natural spline functions of year and age, treating education as a qualitative predictors.#
+library(ISLR)#
+library(splines)#
+attach(Wage)#
+agelims = range(age)#
+age.grid = seq(from = agelims[1], to = agelims[2])#
+gam1 = lm(wage ~ns(year, 4) + ns(age, 5), education, data = Wage)#
+# In order to fit more general sorts of GAMs, using smoothing splines or other components that cannot expressed in terms of basis#
+# functions and then fit using least squares regression, we will need to use the gam library in R #
+# The s() function, which is part of the gam library, is used to indicate that we would like to use a smoothing spline.#
+# We use the gam() function in order to fit a GAM using these components.#
+library(gam)#
+gam.m3 = gam(wage ~ s(year, 4) + s(age, 5) + education, data = Wage)#
+par(mfrow=c(1,3))#
+plot(gam.m3, se = TRUE, col = "blue")#
+# Even though gam1 is not of class gam but rather of class lm, we can still use plot.gam() on it.#
+plot.gam(gam1, se = TRUE, col = "red")
+library(akima)
+gam.lo = gam(wage ~ s(year, 4), lo(age, span = 0.7) + education, data = Wage)#
+plot.gam(gam.lo, se = TRUE, col = "green")#
+# We can also use the lo() function to create iteractions before calling the gam() function.#
+gam.lo.i = gam(wage ~ lo(year, age, span = .5) + education, data = Wage)#
+# We can plot the resulting two-dimensional surface if we first install the akima package.#
+library(akima)#
+plot(gam.lo.i)
+gam.lo = gam(wage ~ s(year, 4) + lo(age, span = 0.7) + education, data = Wage)#
+plot.gam(gam.lo, se = TRUE, col = "green")#
+# We can also use the lo() function to create iteractions before calling the gam() function.#
+gam.lo.i = gam(wage ~ lo(year, age, span = .5) + education, data = Wage)#
+# We can plot the resulting two-dimensional surface if we first install the akima package.#
+library(akima)#
+plot(gam.lo.i)
+plot(gam.lo.i)
+gam.lr = gam(I(wage>250)~year+s(age, df = 5) + education, family = binomial, data = Wage)#
+par(mfrow = c(1,3))#
+plot(gam.lr, se = T, col = "green")
+library(ISLR)#
+library(splines)#
+attach(Wage)#
+agelims = range(age)#
+age.grid = seq(from = agelims[1], to = agelims[2])#
+gam1 = lm(wage ~ns(year, 4) + ns(age, 5), education, data = Wage)
+library(gam)#
+gam.m3 = gam(wage ~ s(year, 4) + s(age, 5) + education, data = Wage)#
+par(mfrow=c(1,3))#
+plot(gam.m3, se = TRUE, col = "blue")
+qplot(gam.m3, se = TRUE, col = "blue")
+gplot(gam.m3, se = TRUE, col = "blue")
+xyplot(gam.m3, se = TRUE, col = "blue")
+plotxy(gam.m3, se = TRUE, col = "blue")
+help(plot.glm)
+help(plot.gam)
+plot.gam(gam1, se = TRUE, col = "red")#
+gam.m1 = gam(wage ~ s(age, 5), + education, data = Wage)#
+gam.m2 = gam(wage ~ year + s(age, 5) + education, data = Wage)#
+anova(gam.m1, gam.m2, gam.m3, test = "F")#
+preds = predict(gam.m2, newdata = Wage)
+plot.gam(gam1, se = TRUE, col = "red")#
+gam.m1 = gam(wage ~ s(age, 5) + education, data = Wage)#
+gam.m2 = gam(wage ~ year + s(age, 5) + education, data = Wage)#
+anova(gam.m1, gam.m2, gam.m3, test = "F")#
+preds = predict(gam.m2, newdata = Wage)
+gam.lo = gam(wage ~ s(year, 4) + lo(age, span = 0.7) + education, data = Wage)#
+plot.gam(gam.lo, se = TRUE, col = "green")
+# We now fit a GAM to predict wage using natural spline functions of year and age, treating education as a qualitative predictors.#
+library(ISLR)#
+library(splines)#
+attach(Wage)#
+agelims = range(age)#
+age.grid = seq(from = agelims[1], to = agelims[2])#
+gam1 = lm(wage ~ns(year, 4) + ns(age, 5), education, data = Wage)#
+# In order to fit more general sorts of GAMs, using smoothing splines or other components that cannot expressed in terms of basis#
+# functions and then fit using least squares regression, we will need to use the gam library in R #
+# The s() function, which is part of the gam library, is used to indicate that we would like to use a smoothing spline.#
+# We use the gam() function in order to fit a GAM using these components.#
+library(gam)#
+gam.m3 = gam(wage ~ s(year, 4) + s(age, 5) + education, data = Wage)#
+par(mfrow=c(1,3))#
+plot(gam.m3, se = TRUE, col = "blue")#
+# Even though gam1 is not of class gam but rather of class lm, we can still use plot.gam() on it.#
+plot.gam(gam1, se = TRUE, col = "red")#
+gam.m1 = gam(wage ~ s(age, 5) + education, data = Wage)#
+gam.m2 = gam(wage ~ year + s(age, 5) + education, data = Wage)#
+anova(gam.m1, gam.m2, gam.m3, test = "F")#
+preds = predict(gam.m2, newdata = Wage)#
+#
+# We can also use local regression fits as building blocks in a GAM, using the lo() function#
+gam.lo = gam(wage ~ s(year, 4) + lo(age, span = 0.7) + education, data = Wage)#
+plot.gam(gam.lo, se = TRUE, col = "green")#
+# We can also use the lo() function to create iteractions before calling the gam() function.#
+gam.lo.i = gam(wage ~ lo(year, age, span = .5) + education, data = Wage)#
+# We can plot the resulting two-dimensional surface if we first install the akima package.#
+library(akima)#
+plot(gam.lo.i)#
+#
+# In order to fit a logistic regression GAM, we once again use the I() function in constructing the binary #
+# response variable, and set family = binomial#
+gam.lr = gam(I(wage>250)~year+s(age, df = 5) + education, family = binomial, data = Wage)#
+par(mfrow = c(1,3))#
+plot(gam.lr, se = T, col = "green")
+runif(1)
+runif(1)
+rep(1,2)
+library(splines)
+X <- runif(50)
+bs(X, knots = c(33, 67))
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))#
+fitGloCub <- lm(Y~poly(X2, 3), data = Data)#
+coefGC <- coef(summary(fitGloCub))#
+fitCubSpl <- lm(Y~bs(X2, knots = c(.33, .67)), data = Data)#
+coefCS <- coef(summary(fitCubSpl))#
+fitNatSpl <- lm(Y~ns(X2, knots = seq(.10, .90, .16)), data = Data)#
+coefNS <- coef(summary(fitNatSpl))
+bs(X, knots = c(.33, .67))
+diag(c(1,0))
+diag(c(1,1))
+inv(diag(c(1,2)))
+library(MASS)
+ginv(diag(c(1,2)))
+diag(diag(c(1,2)))
+poly(X,3)
+matrix(poly(X,3))
+matrix(poly(X,3), nrow = 50)
+HGL <- matrix(X1 = rep(1, 50), X2 = X)
+cbind(X = rep(1, 50), X)
+cbind(X = rep(1, 50), matrix(poly(X,3), nrow = 50))
+cbind(rep(1, 50), ns(X, knots = seq(.10, .90, .16))
+)
+# Pointwise variance curves for four different models#
+#
+library(splines)#
+library(MASS)#
+# define several functions#
+pointvar <- function(H, coef) {#
+	W <- diag(logit(H, coef)*(1-logit(H, coef)))#
+	sigma <- ginv(t(H)%*%W%*%H)#
+	diag(H%*%sigma%*%t(H))#
+}#
+logit <- function(H, coef) {#
+	exp(H%*%ceof)/(1 + exp(H%*%coef))#
+}#
+#
+# generate data#
+set.seed(100)#
+X <- runif(50)#
+Y <- rnorm(50)#
+Data <- data.frame(X1 = rep(1, 50), X2 = X, Y = Y)#
+#
+# Using four different models fit the data#
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))#
+HGL <- cbind(rep(1, 50), X)#
+#
+fitGloCub <- lm(Y~poly(X2, 3), data = Data)#
+coefGC <- coef(summary(fitGloCub))#
+HGC <- cbind(rep(1, 50), matrix(poly(X,3), nrow = 50))#
+#
+fitCubSpl <- lm(Y~bs(X2, knots = c(.33, .66)), data = Data)#
+coefCS <- coef(summary(fitCubSpl))#
+HCS <- cbind(rep(1, 50), bs(X, knots = c(.33,.66)))#
+#
+fitNatSpl <- lm(Y~ns(X2, knots = seq(.10, .90, .16)), data = Data)#
+coefNS <- coef(summary(fitNatSpl))#
+HNS <- cbind(rep(1, 50), ns(X, knots = seq(.10, .90, .16)))#
+# plot#
+plot(X, pointvar(HGL, coefGL), lty = 'l', col = "orange", xlab = "X", ylab = "Pointwise Var")
+# Pointwise variance curves for four different models#
+#
+library(splines)#
+library(MASS)#
+# define several functions#
+pointvar <- function(H, coef) {#
+	W <- diag(logit(H, coef)*(1-logit(H, coef)))#
+	sigma <- ginv(t(H)%*%W%*%H)#
+	diag(H%*%sigma%*%t(H))#
+}#
+logit <- function(H, coef) {#
+	exp(H%*%coef)/(1 + exp(H%*%coef))#
+}#
+#
+# generate data#
+set.seed(100)#
+X <- runif(50)#
+Y <- rnorm(50)#
+Data <- data.frame(X1 = rep(1, 50), X2 = X, Y = Y)#
+#
+# Using four different models fit the data#
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))#
+HGL <- cbind(rep(1, 50), X)#
+#
+fitGloCub <- lm(Y~poly(X2, 3), data = Data)#
+coefGC <- coef(summary(fitGloCub))#
+HGC <- cbind(rep(1, 50), matrix(poly(X,3), nrow = 50))#
+#
+fitCubSpl <- lm(Y~bs(X2, knots = c(.33, .66)), data = Data)#
+coefCS <- coef(summary(fitCubSpl))#
+HCS <- cbind(rep(1, 50), bs(X, knots = c(.33,.66)))#
+#
+fitNatSpl <- lm(Y~ns(X2, knots = seq(.10, .90, .16)), data = Data)#
+coefNS <- coef(summary(fitNatSpl))#
+HNS <- cbind(rep(1, 50), ns(X, knots = seq(.10, .90, .16)))#
+# plot#
+plot(X, pointvar(HGL, coefGL), lty = 'l', col = "orange", xlab = "X", ylab = "Pointwise Var")
+# Pointwise variance curves for four different models#
+#
+library(splines)#
+library(MASS)#
+# define several functions#
+logit <- function(H, coef) {#
+	exp(H%*%coef)/(1 + exp(H%*%coef))#
+}#
+pointvar <- function(H, coef) {#
+	W <- diag(logit(H, coef)*(1-logit(H, coef)))#
+	sigma <- ginv(t(H)%*%W%*%H)#
+	diag(H%*%sigma%*%t(H))#
+}#
+# generate data#
+set.seed(100)#
+X <- runif(50)#
+Y <- rnorm(50)#
+Data <- data.frame(X1 = rep(1, 50), X2 = X, Y = Y)#
+#
+# Using four different models fit the data#
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))#
+HGL <- cbind(rep(1, 50), X)#
+#
+fitGloCub <- lm(Y~poly(X2, 3), data = Data)#
+coefGC <- coef(summary(fitGloCub))#
+HGC <- cbind(rep(1, 50), matrix(poly(X,3), nrow = 50))#
+#
+fitCubSpl <- lm(Y~bs(X2, knots = c(.33, .66)), data = Data)#
+coefCS <- coef(summary(fitCubSpl))#
+HCS <- cbind(rep(1, 50), bs(X, knots = c(.33,.66)))#
+#
+fitNatSpl <- lm(Y~ns(X2, knots = seq(.10, .90, .16)), data = Data)#
+coefNS <- coef(summary(fitNatSpl))#
+HNS <- cbind(rep(1, 50), ns(X, knots = seq(.10, .90, .16)))#
+# plot#
+plot(X, pointvar(HGL, coefGL), lty = 'l', col = "orange", xlab = "X", ylab = "Pointwise Var")
+logit(HGL,coefGL)
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))#
+HGL <- cbind(rep(1, 50), X)
+coefGL
+summary(fitGloLin)
+coefGL <- coef(summary(fitGloLin))[,1]
+coefGL
+str(coefGL)
+# Pointwise variance curves for four different models#
+#
+library(splines)#
+library(MASS)#
+# define several functions#
+logit <- function(H, coef) {#
+	exp(H%*%coef)/(1 + exp(H%*%coef))#
+}#
+pointvar <- function(H, coef) {#
+	W <- diag(logit(H, coef)*(1-logit(H, coef)))#
+	sigma <- ginv(t(H)%*%W%*%H)#
+	diag(H%*%sigma%*%t(H))#
+}#
+# generate data#
+set.seed(100)#
+X <- runif(50)#
+Y <- rnorm(50)#
+Data <- data.frame(X1 = rep(1, 50), X2 = X, Y = Y)#
+#
+# Using four different models fit the data#
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))[,1]#
+HGL <- cbind(rep(1, 50), X)#
+#
+fitGloCub <- lm(Y~poly(X2, 3), data = Data)#
+coefGC <- coef(summary(fitGloCub))[,1]#
+HGC <- cbind(rep(1, 50), matrix(poly(X,3), nrow = 50))#
+#
+fitCubSpl <- lm(Y~bs(X2, knots = c(.33, .66)), data = Data)#
+coefCS <- coef(summary(fitCubSpl))[,1]#
+HCS <- cbind(rep(1, 50), bs(X, knots = c(.33,.66)))#
+#
+fitNatSpl <- lm(Y~ns(X2, knots = seq(.10, .90, .16)), data = Data)#
+coefNS <- coef(summary(fitNatSpl))[,1]#
+HNS <- cbind(rep(1, 50), ns(X, knots = seq(.10, .90, .16)))#
+# plot#
+plot(X, pointvar(HGL, coefGL), lty = 'l', col = "orange", xlab = "X", ylab = "Pointwise Var")
+exp(HGL%*%coefGL)/(1 + exp(HGL%*%coefGL))
+logi = exp(HGL%*%coefGL)/(1 + exp(HGL%*%coefGL))
+diag(logi*(1-logi))
+logi*(1-logi)
+a = (logi*(1-logi))
+diag(a)
+a
+str(A)
+str(a)
+diag(as.vector(a))
+# Pointwise variance curves for four different models#
+#
+library(splines)#
+library(MASS)#
+# define several functions#
+logit <- function(H, coef) {#
+	exp(H%*%coef)/(1 + exp(H%*%coef))#
+}#
+pointvar <- function(H, coef) {#
+	W <- diag(as.vector(logit(H, coef)*(1-logit(H, coef))))#
+	sigma <- ginv(t(H)%*%W%*%H)#
+	diag(H%*%sigma%*%t(H))#
+}#
+# generate data#
+set.seed(100)#
+X <- runif(50)#
+Y <- rnorm(50)#
+Data <- data.frame(X1 = rep(1, 50), X2 = X, Y = Y)#
+#
+# Using four different models fit the data#
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))[,1]#
+HGL <- cbind(rep(1, 50), X)#
+#
+fitGloCub <- lm(Y~poly(X2, 3), data = Data)#
+coefGC <- coef(summary(fitGloCub))[,1]#
+HGC <- cbind(rep(1, 50), matrix(poly(X,3), nrow = 50))#
+#
+fitCubSpl <- lm(Y~bs(X2, knots = c(.33, .66)), data = Data)#
+coefCS <- coef(summary(fitCubSpl))[,1]#
+HCS <- cbind(rep(1, 50), bs(X, knots = c(.33,.66)))#
+#
+fitNatSpl <- lm(Y~ns(X2, knots = seq(.10, .90, .16)), data = Data)#
+coefNS <- coef(summary(fitNatSpl))[,1]#
+HNS <- cbind(rep(1, 50), ns(X, knots = seq(.10, .90, .16)))#
+# plot#
+plot(X, pointvar(HGL, coefGL), lty = 'l', col = "orange", xlab = "X", ylab = "Pointwise Var")
+pointvar(HGL,coefGL)
+X
+plot(X, pointvar(HGL, coefGL))
+order(c(3,1,2))
+a = c(3,1,2)
+a[order(c(3,1,2))]
+plot(X[Xorder], pointvar(HGL, coefGL)[Xorder], lty = 'l', col = "orange", xlab = "X", ylab = "Pointwise Var")
+Xorder <- order(X)
+plot(X[Xorder], pointvar(HGL, coefGL)[Xorder], lty = 'l', col = "orange", xlab = "X", ylab = "Pointwise Var")
+plot(X[Xorder], pointvar(HGL, coefGL)[Xorder])
+plot(X[Xorder], pointvar(HGL, coefGL)[Xorder], typle = "l")
+plot(X[Xorder], pointvar(HGL, coefGL)[Xorder], type = "l")
+# Pointwise variance curves for four different models#
+#
+library(splines)#
+library(MASS)#
+# define several functions#
+logit <- function(H, coef) {#
+	exp(H%*%coef)/(1 + exp(H%*%coef))#
+}#
+pointvar <- function(H, coef) {#
+	W <- diag(as.vector(logit(H, coef)*(1-logit(H, coef))))#
+	sigma <- ginv(t(H)%*%W%*%H)#
+	diag(H%*%sigma%*%t(H))#
+}#
+# generate data#
+set.seed(100)#
+X <- runif(50)#
+Y <- rnorm(50)#
+Data <- data.frame(X1 = rep(1, 50), X2 = X, Y = Y)#
+#
+# Using four different models fit the data#
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))[,1]#
+HGL <- cbind(rep(1, 50), X)#
+#
+fitGloCub <- lm(Y~poly(X2, 3), data = Data)#
+coefGC <- coef(summary(fitGloCub))[,1]#
+HGC <- cbind(rep(1, 50), matrix(poly(X,3), nrow = 50))#
+#
+fitCubSpl <- lm(Y~bs(X2, knots = c(.33, .66)), data = Data)#
+coefCS <- coef(summary(fitCubSpl))[,1]#
+HCS <- cbind(rep(1, 50), bs(X, knots = c(.33,.66)))#
+#
+fitNatSpl <- lm(Y~ns(X2, knots = seq(.10, .90, .16)), data = Data)#
+coefNS <- coef(summary(fitNatSpl))[,1]#
+HNS <- cbind(rep(1, 50), ns(X, knots = seq(.10, .90, .16)))#
+#
+# plot#
+Xorder <- order(X)#
+plot(X[Xorder], pointvar(HGL, coefGL)[Xorder], type = 'l', lwd = 2, col = "orange", xlab = "X", ylab = "Pointwise Var", ylim = c(0, 0.6))#
+lines(X[Xorder], pointvar(HGC, coefGC)[Xorder], type = 'l', lwd = 2, col = "red")#
+lines(X[Xorder], pointvar(HCS, coefCS)[Xorder], type = 'l', lwd = 2, col = "red")#
+lines(X[Xorder], pointvar(HNS, coefNS)[Xorder], type = 'l', lwd = 2, col = "red")
+# Pointwise variance curves for four different models#
+#
+library(splines)#
+library(MASS)#
+# define several functions#
+logit <- function(H, coef) {#
+	exp(H%*%coef)/(1 + exp(H%*%coef))#
+}#
+pointvar <- function(H, coef) {#
+	W <- diag(as.vector(logit(H, coef)*(1-logit(H, coef))))#
+	sigma <- ginv(t(H)%*%W%*%H)#
+	diag(H%*%sigma%*%t(H))#
+}#
+# generate data#
+set.seed(100)#
+X <- runif(50)#
+Y <- rnorm(50)#
+Data <- data.frame(X1 = rep(1, 50), X2 = X, Y = Y)#
+#
+# Using four different models fit the data#
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))[,1]#
+HGL <- cbind(rep(1, 50), X)#
+#
+fitGloCub <- lm(Y~poly(X2, 3), data = Data)#
+coefGC <- coef(summary(fitGloCub))[,1]#
+HGC <- cbind(rep(1, 50), matrix(poly(X,3), nrow = 50))#
+#
+fitCubSpl <- lm(Y~bs(X2, knots = c(.33, .66)), data = Data)#
+coefCS <- coef(summary(fitCubSpl))[,1]#
+HCS <- cbind(rep(1, 50), bs(X, knots = c(.33,.66)))#
+#
+fitNatSpl <- lm(Y~ns(X2, knots = seq(.10, .90, .16)), data = Data)#
+coefNS <- coef(summary(fitNatSpl))[,1]#
+HNS <- cbind(rep(1, 50), ns(X, knots = seq(.10, .90, .16)))#
+#
+# plot#
+orderx <- order(X)#
+Xorder <- X[orderx]#
+varGL <- pointvar(HGL, coefGL)[orderx]#
+varGC <- pointvar(HGC, coefGC)[orderx]#
+varCS <- pointvar(HCS, coefCS)[orderx]#
+varNS <- pointvar(HNS, coefNS)[orderx]#
+ylim = range(c(varGL, varGC, varCS, varNS))#
+plot(Xorder, varGL, type = 'l', lwd = 2, col = "orange", xlab = "X", ylab = "Pointwise Var", ylim = c(0, 0.6))#
+lines(Xorder, varGC, type = 'l', lwd = 2, col = "red")#
+lines(Xorder, varCS, type = 'l', lwd = 2, col = "green")#
+lines(Xorder, varNS, type = 'l', lwd = 2, col = "blue")
+# Pointwise variance curves for four different models#
+#
+library(splines)#
+library(MASS)#
+# define several functions#
+logit <- function(H, coef) {#
+	exp(H%*%coef)/(1 + exp(H%*%coef))#
+}#
+pointvar <- function(H, coef) {#
+	W <- diag(as.vector(logit(H, coef)*(1-logit(H, coef))))#
+	sigma <- ginv(t(H)%*%W%*%H)#
+	diag(H%*%sigma%*%t(H))#
+}#
+# generate data#
+set.seed(100)#
+X <- runif(50)#
+Y <- rnorm(50)#
+Data <- data.frame(X1 = rep(1, 50), X2 = X, Y = Y)#
+#
+# Using four different models fit the data#
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))[,1]#
+HGL <- cbind(rep(1, 50), X)#
+#
+fitGloCub <- lm(Y~poly(X2, 3), data = Data)#
+coefGC <- coef(summary(fitGloCub))[,1]#
+HGC <- cbind(rep(1, 50), matrix(poly(X,3), nrow = 50))#
+#
+fitCubSpl <- lm(Y~bs(X2, knots = c(.33, .66)), data = Data)#
+coefCS <- coef(summary(fitCubSpl))[,1]#
+HCS <- cbind(rep(1, 50), bs(X, knots = c(.33,.66)))#
+#
+fitNatSpl <- lm(Y~ns(X2, knots = seq(.10, .90, .16)), data = Data)#
+coefNS <- coef(summary(fitNatSpl))[,1]#
+HNS <- cbind(rep(1, 50), ns(X, knots = seq(.10, .90, .16)))#
+#
+# plot#
+orderx <- order(X)#
+Xorder <- X[orderx]#
+varGL <- pointvar(HGL, coefGL)[orderx]#
+varGC <- pointvar(HGC, coefGC)[orderx]#
+varCS <- pointvar(HCS, coefCS)[orderx]#
+varNS <- pointvar(HNS, coefNS)[orderx]#
+ylim = range(c(varGL, varGC, varCS, varNS))#
+plot(Xorder, varGL, type = 'l', lwd = 2, col = "orange", xlab = "X", ylab = "Pointwise Var", ylim = ylim)#
+lines(Xorder, varGC, type = 'l', lwd = 2, col = "red")#
+lines(Xorder, varCS, type = 'l', lwd = 2, col = "green")#
+lines(Xorder, varNS, type = 'l', lwd = 2, col = "blue")
+# Pointwise variance curves for four different models#
+#
+library(splines)#
+library(MASS)#
+# define several functions#
+logit <- function(H, coef) {#
+	exp(H%*%coef)/(1 + exp(H%*%coef))#
+}#
+pointvar <- function(H, coef) {#
+	W <- diag(as.vector(logit(H, coef)*(1-logit(H, coef))))#
+	sigma <- ginv(t(H)%*%W%*%H)#
+	diag(H%*%sigma%*%t(H))#
+}#
+# generate data#
+set.seed(100)#
+X <- runif(50)#
+Y <- rnorm(50)#
+Data <- data.frame(X1 = rep(1, 50), X2 = X, Y = Y)#
+#
+# Using four different models fit the data#
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))[,1]#
+HGL <- cbind(rep(1, 50), X)#
+#
+fitGloCub <- lm(Y~poly(X2, 3), data = Data)#
+coefGC <- coef(summary(fitGloCub))[,1]#
+HGC <- cbind(rep(1, 50), matrix(poly(X,3), nrow = 50))#
+#
+fitCubSpl <- lm(Y~bs(X2, knots = c(.33, .66)), data = Data)#
+coefCS <- coef(summary(fitCubSpl))[,1]#
+HCS <- cbind(rep(1, 50), bs(X, knots = c(.33,.66)))#
+#
+fitNatSpl <- lm(Y~ns(X2, knots = seq(.10, .90, .16)), data = Data)#
+coefNS <- coef(summary(fitNatSpl))[,1]#
+HNS <- cbind(rep(1, 50), ns(X, knots = seq(.10, .90, .16)))#
+#
+# plot#
+orderx <- order(X)#
+Xorder <- X[orderx]#
+varGL <- pointvar(HGL, coefGL)[orderx]#
+varGC <- pointvar(HGC, coefGC)[orderx]#
+varCS <- pointvar(HCS, coefCS)[orderx]#
+varNS <- pointvar(HNS, coefNS)[orderx]#
+ylim = range(c(varGL, varGC, varCS, varNS))#
+plot(Xorder, varGL, type = 'l', lwd = 2, col = "orange", xlab = "X", ylab = "Pointwise Variances", ylim = ylim)#
+lines(Xorder, varGC, type = 'l', lwd = 2, col = "red")#
+lines(Xorder, varCS, type = 'l', lwd = 2, col = "green")#
+lines(Xorder, varNS, type = 'l', lwd = 2, col = "blue")
+# Pointwise variance curves for four different models#
+#
+library(splines)#
+library(MASS)#
+# define several functions#
+logit <- function(H, coef) {#
+	exp(H%*%coef)/(1 + exp(H%*%coef))#
+}#
+pointvar <- function(H, coef) {#
+	W <- diag(as.vector(logit(H, coef)*(1-logit(H, coef))))#
+	sigma <- ginv(t(H)%*%W%*%H)#
+	diag(H%*%sigma%*%t(H))#
+}#
+# generate data#
+set.seed(100)#
+X <- runif(50)#
+Y <- rnorm(50)#
+Data <- data.frame(X1 = rep(1, 50), X2 = X, Y = Y)#
+#
+# Using four different models fit the data#
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))[,1]#
+HGL <- cbind(rep(1, 50), X)#
+#
+fitGloCub <- lm(Y~poly(X2, 3), data = Data)#
+coefGC <- coef(summary(fitGloCub))[,1]#
+HGC <- cbind(rep(1, 50), matrix(poly(X,3), nrow = 50))#
+#
+fitCubSpl <- lm(Y~bs(X2, knots = c(.33, .66)), data = Data)#
+coefCS <- coef(summary(fitCubSpl))[,1]#
+HCS <- cbind(rep(1, 50), bs(X, knots = c(.33,.66)))#
+#
+fitNatSpl <- lm(Y~ns(X2, knots = seq(.10, .90, .16)), data = Data)#
+coefNS <- coef(summary(fitNatSpl))[,1]#
+HNS <- cbind(rep(1, 50), ns(X, knots = seq(.10, .90, .16)))#
+#
+# plot#
+orderx <- order(X)#
+Xorder <- X[orderx]#
+varGL <- pointvar(HGL, coefGL)[orderx]#
+varGC <- pointvar(HGC, coefGC)[orderx]#
+varCS <- pointvar(HCS, coefCS)[orderx]#
+varNS <- pointvar(HNS, coefNS)[orderx]#
+ylim = range(c(varGL, varGC, varCS, varNS))#
+plot(Xorder, varGL, type = 'l', lwd = 1, col = "orange", xlab = "X", ylab = "Pointwise Variances", ylim = ylim)#
+lines(Xorder, varGC, type = 'l', lwd = 1, col = "red")#
+lines(Xorder, varCS, type = 'l', lwd = 1, col = "green")#
+lines(Xorder, varNS, type = 'l', lwd = 1, col = "blue")
+legend(# Pointwise variance curves for four different models#
+#
+library(splines)#
+library(MASS)#
+# define several functions#
+logit <- function(H, coef) {#
+	exp(H%*%coef)/(1 + exp(H%*%coef))#
+}#
+pointvar <- function(H, coef) {#
+	W <- diag(as.vector(logit(H, coef)*(1-logit(H, coef))))#
+	sigma <- ginv(t(H)%*%W%*%H)#
+	diag(H%*%sigma%*%t(H))#
+}#
+# generate data#
+set.seed(100)#
+X <- runif(50)#
+Y <- rnorm(50)#
+Data <- data.frame(X1 = rep(1, 50), X2 = X, Y = Y)#
+#
+# Using four different models fit the data#
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))[,1]#
+HGL <- cbind(rep(1, 50), X)#
+#
+fitGloCub <- lm(Y~poly(X2, 3), data = Data)#
+coefGC <- coef(summary(fitGloCub))[,1]#
+HGC <- cbind(rep(1, 50), matrix(poly(X,3), nrow = 50))#
+#
+fitCubSpl <- lm(Y~bs(X2, knots = c(.33, .66)), data = Data)#
+coefCS <- coef(summary(fitCubSpl))[,1]#
+HCS <- cbind(rep(1, 50), bs(X, knots = c(.33,.66)))#
+#
+fitNatSpl <- lm(Y~ns(X2, knots = seq(.10, .90, .16)), data = Data)#
+coefNS <- coef(summary(fitNatSpl))[,1]#
+HNS <- cbind(rep(1, 50), ns(X, knots = seq(.10, .90, .16)))#
+#
+# plot#
+orderx <- order(X)#
+Xorder <- X[orderx]#
+varGL <- pointvar(HGL, coefGL)[orderx]#
+varGC <- pointvar(HGC, coefGC)[orderx]#
+varCS <- pointvar(HCS, coefCS)[orderx]#
+varNS <- pointvar(HNS, coefNS)[orderx]#
+ylim = range(c(varGL, varGC, varCS, varNS))#
+plot(Xorder, varGL, type = 'l', lwd = 1, col = "orange", xlab = "X", ylab = "Pointwise Variances", ylim = ylim)#
+lines(Xorder, varGC, type = 'l', lwd = 1, col = "red")#
+lines(Xorder, varCS, type = 'l', lwd = 1, col = "green")#
+lines(Xorder, varNS, type = 'l', lwd = 1, col = "blue")#
+legend(topright, c("Global Linear", "Global Cubic Polynomial", "Cubic Splines", "Natural Cubic", col = c("orange", "red", "green", "blue")))
+help(legend)
+# Pointwise variance curves for four different models#
+#
+library(splines)#
+library(MASS)#
+# define several functions#
+logit <- function(H, coef) {#
+	exp(H%*%coef)/(1 + exp(H%*%coef))#
+}#
+pointvar <- function(H, coef) {#
+	W <- diag(as.vector(logit(H, coef)*(1-logit(H, coef))))#
+	sigma <- ginv(t(H)%*%W%*%H)#
+	diag(H%*%sigma%*%t(H))#
+}#
+# generate data#
+set.seed(100)#
+X <- runif(50)#
+Y <- rnorm(50)#
+Data <- data.frame(X1 = rep(1, 50), X2 = X, Y = Y)#
+#
+# Using four different models fit the data#
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))[,1]#
+HGL <- cbind(rep(1, 50), X)#
+#
+fitGloCub <- lm(Y~poly(X2, 3), data = Data)#
+coefGC <- coef(summary(fitGloCub))[,1]#
+HGC <- cbind(rep(1, 50), matrix(poly(X,3), nrow = 50))#
+#
+fitCubSpl <- lm(Y~bs(X2, knots = c(.33, .66)), data = Data)#
+coefCS <- coef(summary(fitCubSpl))[,1]#
+HCS <- cbind(rep(1, 50), bs(X, knots = c(.33,.66)))#
+#
+fitNatSpl <- lm(Y~ns(X2, knots = seq(.10, .90, .16)), data = Data)#
+coefNS <- coef(summary(fitNatSpl))[,1]#
+HNS <- cbind(rep(1, 50), ns(X, knots = seq(.10, .90, .16)))#
+#
+# plot#
+orderx <- order(X)#
+Xorder <- X[orderx]#
+varGL <- pointvar(HGL, coefGL)[orderx]#
+varGC <- pointvar(HGC, coefGC)[orderx]#
+varCS <- pointvar(HCS, coefCS)[orderx]#
+varNS <- pointvar(HNS, coefNS)[orderx]#
+ylim = range(c(varGL, varGC, varCS, varNS))#
+plot(Xorder, varGL, type = 'l', lwd = 1, col = "orange", xlab = "X", ylab = "Pointwise Variances", ylim = ylim)#
+lines(Xorder, varGC, type = 'l', lwd = 1, col = "red")#
+lines(Xorder, varCS, type = 'l', lwd = 1, col = "green")#
+lines(Xorder, varNS, type = 'l', lwd = 1, col = "blue")#
+legend(1, c("Global Linear", "Global Cubic Polynomial", "Cubic Splines", "Natural Cubic", col = c("orange", "red", "green", "blue"))
+)
+# Pointwise variance curves for four different models#
+#
+library(splines)#
+library(MASS)#
+# define several functions#
+logit <- function(H, coef) {#
+	exp(H%*%coef)/(1 + exp(H%*%coef))#
+}#
+pointvar <- function(H, coef) {#
+	W <- diag(as.vector(logit(H, coef)*(1-logit(H, coef))))#
+	sigma <- ginv(t(H)%*%W%*%H)#
+	diag(H%*%sigma%*%t(H))#
+}#
+# generate data#
+set.seed(100)#
+X <- runif(50)#
+Y <- rnorm(50)#
+Data <- data.frame(X1 = rep(1, 50), X2 = X, Y = Y)#
+#
+# Using four different models fit the data#
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))[,1]#
+HGL <- cbind(rep(1, 50), X)#
+#
+fitGloCub <- lm(Y~poly(X2, 3), data = Data)#
+coefGC <- coef(summary(fitGloCub))[,1]#
+HGC <- cbind(rep(1, 50), matrix(poly(X,3), nrow = 50))#
+#
+fitCubSpl <- lm(Y~bs(X2, knots = c(.33, .66)), data = Data)#
+coefCS <- coef(summary(fitCubSpl))[,1]#
+HCS <- cbind(rep(1, 50), bs(X, knots = c(.33,.66)))#
+#
+fitNatSpl <- lm(Y~ns(X2, knots = seq(.10, .90, .16)), data = Data)#
+coefNS <- coef(summary(fitNatSpl))[,1]#
+HNS <- cbind(rep(1, 50), ns(X, knots = seq(.10, .90, .16)))#
+#
+# plot#
+orderx <- order(X)#
+Xorder <- X[orderx]#
+varGL <- pointvar(HGL, coefGL)[orderx]#
+varGC <- pointvar(HGC, coefGC)[orderx]#
+varCS <- pointvar(HCS, coefCS)[orderx]#
+varNS <- pointvar(HNS, coefNS)[orderx]#
+ylim = range(c(varGL, varGC, varCS, varNS))#
+plot(Xorder, varGL, type = 'l', lwd = 1, col = "orange", xlab = "X", ylab = "Pointwise Variances", ylim = ylim)#
+lines(Xorder, varGC, type = 'l', lwd = 1, col = "red")#
+lines(Xorder, varCS, type = 'l', lwd = 1, col = "green")#
+lines(Xorder, varNS, type = 'l', lwd = 1, col = "blue")#
+legend(1, c("Global Linear", "Global Cubic Polynomial", "Cubic Splines", "Natural Cubic"), col = c("orange", "red", "green", "blue"))
+# Pointwise variance curves for four different models#
+#
+library(splines)#
+library(MASS)#
+# define several functions#
+logit <- function(H, coef) {#
+	exp(H%*%coef)/(1 + exp(H%*%coef))#
+}#
+pointvar <- function(H, coef) {#
+	W <- diag(as.vector(logit(H, coef)*(1-logit(H, coef))))#
+	sigma <- ginv(t(H)%*%W%*%H)#
+	diag(H%*%sigma%*%t(H))#
+}#
+# generate data#
+set.seed(100)#
+X <- runif(50)#
+Y <- rnorm(50)#
+Data <- data.frame(X1 = rep(1, 50), X2 = X, Y = Y)#
+#
+# Using four different models fit the data#
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))[,1]#
+HGL <- cbind(rep(1, 50), X)#
+#
+fitGloCub <- lm(Y~poly(X2, 3), data = Data)#
+coefGC <- coef(summary(fitGloCub))[,1]#
+HGC <- cbind(rep(1, 50), matrix(poly(X,3), nrow = 50))#
+#
+fitCubSpl <- lm(Y~bs(X2, knots = c(.33, .66)), data = Data)#
+coefCS <- coef(summary(fitCubSpl))[,1]#
+HCS <- cbind(rep(1, 50), bs(X, knots = c(.33,.66)))#
+#
+fitNatSpl <- lm(Y~ns(X2, knots = seq(.10, .90, .16)), data = Data)#
+coefNS <- coef(summary(fitNatSpl))[,1]#
+HNS <- cbind(rep(1, 50), ns(X, knots = seq(.10, .90, .16)))#
+#
+# plot#
+orderx <- order(X)#
+Xorder <- X[orderx]#
+varGL <- pointvar(HGL, coefGL)[orderx]#
+varGC <- pointvar(HGC, coefGC)[orderx]#
+varCS <- pointvar(HCS, coefCS)[orderx]#
+varNS <- pointvar(HNS, coefNS)[orderx]#
+ylim = range(c(varGL, varGC, varCS, varNS))#
+plot(Xorder, varGL, type = 'l', lwd = 1, col = "orange", xlab = "X", ylab = "Pointwise Variances", ylim = ylim)#
+lines(Xorder, varGC, type = 'l', lwd = 1, col = "red")#
+lines(Xorder, varCS, type = 'l', lwd = 1, col = "green")#
+lines(Xorder, varNS, type = 'l', lwd = 1, col = "blue")#
+legend(1, c("Global Linear", "Global Cubic Polynomial", "Cubic Splines", "Natural Cubic"), col = c("orange", "red", "green", "blue"), lty = 1)
+# Pointwise variance curves for four different models#
+#
+library(splines)#
+library(MASS)#
+# define several functions#
+logit <- function(H, coef) {#
+	exp(H%*%coef)/(1 + exp(H%*%coef))#
+}#
+pointvar <- function(H, coef) {#
+	W <- diag(as.vector(logit(H, coef)*(1-logit(H, coef))))#
+	sigma <- ginv(t(H)%*%W%*%H)#
+	diag(H%*%sigma%*%t(H))#
+}#
+# generate data#
+set.seed(100)#
+X <- runif(50)#
+Y <- rnorm(50)#
+Data <- data.frame(X1 = rep(1, 50), X2 = X, Y = Y)#
+#
+# Using four different models fit the data#
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))[,1]#
+HGL <- cbind(rep(1, 50), X)#
+#
+fitGloCub <- lm(Y~poly(X2, 3), data = Data)#
+coefGC <- coef(summary(fitGloCub))[,1]#
+HGC <- cbind(rep(1, 50), matrix(poly(X,3), nrow = 50))#
+#
+fitCubSpl <- lm(Y~bs(X2, knots = c(.33, .66)), data = Data)#
+coefCS <- coef(summary(fitCubSpl))[,1]#
+HCS <- cbind(rep(1, 50), bs(X, knots = c(.33,.66)))#
+#
+fitNatSpl <- lm(Y~ns(X2, knots = seq(.10, .90, .16)), data = Data)#
+coefNS <- coef(summary(fitNatSpl))[,1]#
+HNS <- cbind(rep(1, 50), ns(X, knots = seq(.10, .90, .16)))#
+#
+# plot#
+orderx <- order(X)#
+Xorder <- X[orderx]#
+varGL <- pointvar(HGL, coefGL)[orderx]#
+varGC <- pointvar(HGC, coefGC)[orderx]#
+varCS <- pointvar(HCS, coefCS)[orderx]#
+varNS <- pointvar(HNS, coefNS)[orderx]#
+ylim = range(c(varGL, varGC, varCS, varNS))#
+plot(Xorder, varGL, type = 'l', lwd = 1, col = "orange", xlab = "X", ylab = "Pointwise Variances", ylim = ylim)#
+lines(Xorder, varGC, type = 'l', lwd = 1, col = "red")#
+lines(Xorder, varCS, type = 'l', lwd = 1, col = "green")#
+lines(Xorder, varNS, type = 'l', lwd = 1, col = "blue")#
+legend("topright", c("Global Linear", "Global Cubic Polynomial", "Cubic Splines", "Natural Cubic"), col = c("orange", "red", "green", "blue"), lty = 1)
+# Pointwise variance curves for four different models#
+#
+library(splines)#
+library(MASS)#
+# define several functions#
+logit <- function(H, coef) {#
+	exp(H%*%coef)/(1 + exp(H%*%coef))#
+}#
+pointvar <- function(H, coef) {#
+	W <- diag(as.vector(logit(H, coef)*(1-logit(H, coef))))#
+	sigma <- ginv(t(H)%*%W%*%H)#
+	diag(H%*%sigma%*%t(H))#
+}#
+# generate data#
+set.seed(50)#
+X <- runif(50)#
+Y <- rnorm(50)#
+Data <- data.frame(X1 = rep(1, 50), X2 = X, Y = Y)#
+#
+# Using four different models fit the data#
+fitGloLin <- lm(Y~.-1, data = Data)#
+coefGL <- coef(summary(fitGloLin))[,1]#
+HGL <- cbind(rep(1, 50), X)#
+#
+fitGloCub <- lm(Y~poly(X2, 3), data = Data)#
+coefGC <- coef(summary(fitGloCub))[,1]#
+HGC <- cbind(rep(1, 50), matrix(poly(X,3), nrow = 50))#
+#
+fitCubSpl <- lm(Y~bs(X2, knots = c(.33, .66)), data = Data)#
+coefCS <- coef(summary(fitCubSpl))[,1]#
+HCS <- cbind(rep(1, 50), bs(X, knots = c(.33,.66)))#
+#
+fitNatSpl <- lm(Y~ns(X2, knots = seq(.10, .90, .16)), data = Data)#
+coefNS <- coef(summary(fitNatSpl))[,1]#
+HNS <- cbind(rep(1, 50), ns(X, knots = seq(.10, .90, .16)))#
+#
+# plot#
+orderx <- order(X)#
+Xorder <- X[orderx]#
+varGL <- pointvar(HGL, coefGL)[orderx]#
+varGC <- pointvar(HGC, coefGC)[orderx]#
+varCS <- pointvar(HCS, coefCS)[orderx]#
+varNS <- pointvar(HNS, coefNS)[orderx]#
+ylim = range(c(varGL, varGC, varCS, varNS))#
+plot(Xorder, varGL, type = 'l', lwd = 1, col = "orange", xlab = "X", ylab = "Pointwise Variances", ylim = ylim)#
+lines(Xorder, varGC, type = 'l', lwd = 1, col = "red")#
+lines(Xorder, varCS, type = 'l', lwd = 1, col = "green")#
+lines(Xorder, varNS, type = 'l', lwd = 1, col = "blue")#
+legend("topright", c("Global Linear", "Global Cubic Polynomial", "Cubic Splines", "Natural Cubic"), col = c("orange", "red", "green", "blue"), lty = 1)
+seq(.1, .9, .16)
+setwd("/Users/fanfan/github/Elements of Statistical Learning code/chapter5/")
+library(splines)
+Data <- read.csv("South African Heart Disease.data.txt")
+fix(Data)
+help(ns)
+names(Data)
+Data <- Data[, -1]
+names(Data)
+sbfitFull <- glm(chd ~ ns(sbp, df = 4)+ns(tobacco, df = 4)+ns(ldl, df = 4)+ns(adiposity, df = 4)#
+	+ns(typea, df = 4)+ns(obesity, df = 4)+ns(alcohol, df = 4)+ns(age, df = 4), data = Data, family = "binomial")#
+# We carried out a backward stepwise deletion process. The AIC stats was used to drop terms#
+fit <- step(fitFull)
+fitFull <- glm(chd ~ ns(sbp, df = 4)+ns(tobacco, df = 4)+ns(ldl, df = 4)+ns(adiposity, df = 4)#
+	+ns(typea, df = 4)+ns(obesity, df = 4)+ns(alcohol, df = 4)+ns(age, df = 4), data = Data, family = "binomial")
+fit <- step(fitFull)
+summary(fit)
+fitFull <- glm(chd ~ ns(sbp, df = 4)+ns(tobacco, df = 4)+ns(ldl, df = 4)+ns(adiposity, df = 4)#
+	+ns(typea, df = 4)+ns(obesity, df = 4)+ns(alcohol, df = 4)+ns(age, df = 4)+famhist, data = Data, family = "binomial")#
+# We carried out a backward stepwise deletion process. The AIC stats was used to drop terms#
+fit <- step(fitFull)
+summary(fit)
+opar <- par(mfrow = c(3,3))#
+plot.gam(fit, se = TRUE, col = "green")
+# Fitting nonlinear logistic regression models to the South African heart disease data.#
+#
+# read data#
+setwd("/Users/fanfan/github/Elements of Statistical Learning code/chapter5/")#
+library(splines)#
+Data <- read.csv("South African Heart Disease.data.txt")#
+Data <- Data[, -1]#
+#
+# We explore nonlinearities in the functions using natural splines#
+# Using four natural spline bases for each term in the model#
+fitFull <- glm(chd ~ ns(sbp, df = 4)+ns(tobacco, df = 4)+ns(ldl, df = 4)+ns(adiposity, df = 4)#
+	+ns(typea, df = 4)+ns(obesity, df = 4)+ns(alcohol, df = 4)+ns(age, df = 4)+famhist, data = Data, family = "binomial")#
+# We carried out a backward stepwise deletion process. The AIC stats was used to drop terms#
+fit <- step(fitFull)#
+#
+# plot #
+opar <- par(mfrow = c(3,2))#
+plot.gam(fit, se = TRUE, col = "green", xlab = c(1,2,3,4,5,6))
+# Fitting nonlinear logistic regression models to the South African heart disease data.#
+#
+# read data#
+setwd("/Users/fanfan/github/Elements of Statistical Learning code/chapter5/")#
+library(splines)#
+Data <- read.csv("South African Heart Disease.data.txt")#
+Data <- Data[, -1]#
+#
+# We explore nonlinearities in the functions using natural splines#
+# Using four natural spline bases for each term in the model#
+fitFull <- glm(chd ~ ns(sbp, df = 4)+ns(tobacco, df = 4)+ns(ldl, df = 4)+ns(adiposity, df = 4)#
+	+ns(typea, df = 4)+ns(obesity, df = 4)+ns(alcohol, df = 4)+ns(age, df = 4)+famhist, data = Data, family = "binomial")#
+# We carried out a backward stepwise deletion process. The AIC stats was used to drop terms#
+fit <- step(fitFull)#
+#
+# plot #
+opar <- par(mfrow = c(3,2))#
+plot.gam(fit, se = TRUE, col = "green")
+# Fitting nonlinear logistic regression models to the South African heart disease data.#
+#
+# read data#
+setwd("/Users/fanfan/github/Elements of Statistical Learning code/chapter5/")#
+library(splines)#
+Data <- read.csv("South African Heart Disease.data.txt")#
+Data <- Data[, -1]#
+#
+# We explore nonlinearities in the functions using natural splines#
+# Using four natural spline bases for each term in the model#
+fitFull <- glm(chd ~ ns(sbp, df = 4)+ns(tobacco, df = 4)+ns(ldl, df = 4)+ns(adiposity, df = 4)#
+	+ns(typea, df = 4)+ns(obesity, df = 4)+ns(alcohol, df = 4)+ns(age, df = 4)+famhist, data = Data, family = "binomial")#
+# We carried out a backward stepwise deletion process. The AIC stats was used to drop terms#
+fit <- step(fitFull)#
+#
+# plot #
+opar <- par(mfrow = c(3,2))#
+plot(fit, se = TRUE, col = "green")
+# Fitting nonlinear logistic regression models to the South African heart disease data.#
+#
+# read data#
+setwd("/Users/fanfan/github/Elements of Statistical Learning code/chapter5/")#
+library(splines)#
+Data <- read.csv("South African Heart Disease.data.txt")#
+Data <- Data[, -1]#
+#
+# We explore nonlinearities in the functions using natural splines#
+# Using four natural spline bases for each term in the model#
+fitFull <- glm(chd ~ ns(sbp, df = 4)+ns(tobacco, df = 4)+ns(ldl, df = 4)+ns(adiposity, df = 4)#
+	+ns(typea, df = 4)+ns(obesity, df = 4)+ns(alcohol, df = 4)+ns(age, df = 4)+famhist, data = Data, family = "binomial")#
+# We carried out a backward stepwise deletion process. The AIC stats was used to drop terms#
+fit <- step(fitFull)#
+#
+# plot #
+opar <- par(mfrow = c(3,2))#
+plot.gam(fit, se = TRUE, col = "green")
+setwd("/Users/fanfan/github/Elements of Statistical Learning code/chapter5/")#
+Data <- read.csv("phoneme.data.txt")
+fix(Data)
+Data <- Data[,-c(1,"speaker")]
+Data <- Data[,-c(1,dim(Data)[2])]
+fix(Data)
+str(Data)
+summary(Data)
+Data[,"g"] == "aa"
+T||F
+Data = Data[(Data[,"g"] == "aa")||(Data[,"g"] == "ao"),]
+fix(Data)
+c(T,F) ||c(F,F)
+c(T,F) * c(F,F)
+c(T,F) + c(F,F)
+Data = Data[(Data[,"g"] == "aa")+(Data[,"g"] == "ao") == 1,]
+Data <- read.csv("phoneme.data.txt")#
+Data <- Data[,-c(1,dim(Data)[2])]#
+Data = Data[(Data[,"g"] == "aa")+(Data[,"g"] == "ao") == 1,]
+fix(Data)
+plot(Data[,1:255])
+plot(1:255,Data[,1:255])
+plot(1:255,as.matrix(Data[,1:255]))
+plot(1:255,t(as.matrix(Data[,1:255])))
+as.matrix(Data[,1:255])
+dim(as.matrix(Data[,1:255]))
+plot(matrix(1:4, 2), matrix(1:4,2))
+plot(matrix(1:4, 2), matrix(1:4,2), col = c("red", "blue"))
+rep(1:255, 1717)
+plot(matrix(rep(1:255, 1717), nrow = 255),t(as.matrix(Data[,1:255])))
+plot(matrix(rep(1:256, sum(Data[,"g"] == "aa")), nrow = 256),t(as.matrix(Data[Data[,"g"] == "aa",1:256])), type = "l", col = "green")
+plot(matrix(1:6,2), matrix(1:6, 2), type = "l", col =c('red', "green"))
+plot(matrix(1:6,2), matrix(1:6, 2), type = "b", col =c('red', "green"))
+help(plot)
+plot(matrix(rep(1:256, 3, nrow = 256),t(as.matrix(Data[1:3,1:256])), type = "l", col = "green")
+)
+plot(matrix(rep(1:256, 3), nrow = 256),t(as.matrix(Data[1:3,1:256])), type = "l", col = "green")
+help(matline)
+help(matlines)
+matplot((as.matrix(Data[Data[,"g"] == "aa",1:256])), type = "l", col = "green")
+matplot(t(as.matrix(Data[Data[,"g"] == "aa",1:256])), type = "l", col = "green")
+matplot(t(as.matrix(Data[Data[,"g"] == "aa",1:256][sample(1:695,15),])), type = "l", col = "green")
+matplot(t(as.matrix(Data[Data[,"g"] == "aa",1:256][sample(1:695,15),])), type = "l", col = "green", main = "Phoneme Examples",#
+	xlab = "Frequency", ylab = "Log-periodogram")
+matlines(t(as.matrix(Data[Data[,"g"] == "ao",1:256][sample(1:1022,15),])), type = "l", col = 'red')
+legend(c("aa", "ao"), col = c("green", "red"))
+legend(c("aa", "ao"), col = c("green", "red"), lty = 1)
+legend('topright',c("aa", "ao"), col = c("green", "red"), lty = 1)
+rawfit <- glm(g~., data = Data, family = "binomial")#
+summary(rawfit)
+coefs <- coef(summary(rawfit))[-1, 2]
+coefs
+coefs <- coef(summary(rawfit))[-1, 1]
+coefs
+plot(coefs, main = "Raw and Restricted Logistic Regression", xlab = "Frequency", ylab = "Logistic Regression Coefficients")
+plot(coefs, main = "Raw and Restricted Logistic Regression", xlab = "Frequency", ylab = "Logistic Regression Coefficients", #
+	type = "l", col = "grey")
+abline(h = 0, col = "grey")
+plot(coefs, main = "Raw and Restricted Logistic Regression", xlab = "Frequency", ylab = "Logistic Regression Coefficients", #
+	type = "l", col = "grey", ylim = c(-.4,0.4))#
+abline(h = 0, col = "grey")
+opar <- par(mfrow = c(2,1))#
+# plot#
+matplot(t(as.matrix(Data[Data[,"g"] == "aa",1:256][sample(1:695,15),])), type = "l", col = "green", main = "Phoneme Examples",#
+	xlab = "Frequency", ylab = "Log-periodogram")#
+matlines(t(as.matrix(Data[Data[,"g"] == "ao",1:256][sample(1:1022,15),])), type = "l", col = 'red')#
+legend('topright',c("aa", "ao"), col = c("green", "red"), lty = 1)#
+#
+# Raw Logistic Regression#
+rawfit <- glm(g~., data = Data, family = "binomial")#
+coefs <- coef(summary(rawfit))[-1, 1]#
+plot(coefs, main = "Raw and Restricted Logistic Regression", xlab = "Frequency", ylab = "Logistic Regression Coefficients", #
+	type = "l", col = "grey", ylim = c(-.4,0.4))#
+abline(h = 0, col = "grey")
+H <- ns(1:256, df = 12)
+dim(H)
+as.matrix(1:4, 2)
+as.matrix(data.frame(1:4, 2:5))
+H <- ns(1:256, df = 12)#
+X <- as.matrix(Data[,1:256])#
+Xstar <- X%*%H#
+resfit <- glm(Data[,"g"] ~ Xstar, family = "binomial")#
+rescoef <- coef(summary(resfit))[-1,1]#
+rescoef <- H%*%t(rescoef)#
+lines(rescoef, col = "red", type = "l", lwd = 2)
+H <- ns(1:256, df = 12)#
+X <- as.matrix(Data[,1:256])#
+Xstar <- X%*%H#
+resfit <- glm(Data[,"g"] ~ Xstar, family = "binomial")#
+rescoef <- coef(summary(resfit))[-1,1]#
+rescoef <- H%*%(as.matrix(rescoef))#
+lines(rescoef, col = "red", type = "l", lwd = 2)
+setwd("/Users/fanfan/github/Elements of Statistical Learning code/chapter5/")#
+Data <- read.csv("phoneme.data.txt")#
+Data <- Data[,-c(1,dim(Data)[2])]#
+Data = Data[(Data[,"g"] == "aa")+(Data[,"g"] == "ao") == 1,]#
+library(splines)#
+set.seed(100)#
+#
+opar <- par(mfrow = c(2,1))#
+# plot#
+matplot(t(as.matrix(Data[Data[,"g"] == "aa",1:256][sample(1:695,15),])), type = "l", col = "green", main = "Phoneme Examples",#
+	xlab = "Frequency", ylab = "Log-periodogram")#
+matlines(t(as.matrix(Data[Data[,"g"] == "ao",1:256][sample(1:1022,15),])), type = "l", col = 'red')#
+legend('topright',c("aa", "ao"), col = c("green", "red"), lty = 1)#
+#
+# Raw Logistic Regression#
+rawfit <- glm(g~., data = Data, family = "binomial")#
+rawcoef <- coef(summary(rawfit))[-1, 1]#
+plot(rawcoef, main = "Raw and Restricted Logistic Regression", xlab = "Frequency", ylab = "Logistic Regression Coefficients", #
+	type = "l", col = "grey", ylim = c(-.4,0.4))#
+abline(h = 0, col = "grey")#
+# Restricted Logistic Regression#
+H <- ns(1:256, df = 12)#
+X <- as.matrix(Data[,1:256])#
+Xstar <- X%*%H#
+resfit <- glm(Data[,"g"] ~ Xstar, family = "binomial")#
+rescoef <- coef(summary(resfit))[-1,1]#
+rescoef <- H%*%(as.matrix(rescoef))#
+lines(rescoef, col = "red", type = "l", lwd = 2)
