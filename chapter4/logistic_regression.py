@@ -12,7 +12,7 @@ preds = add_constant(preds)
 preds.famhist = (preds.famhist == 'Present').astype('f')
 lm = Logit(d.chd, preds)
 f = lm.fit(disp=False)
-print("Running logistic regression of SouthAfrica Heart data:")
+print("\nRunning logistic regression of SouthAfrica Heart data:\n")
 print(f.summary())
 
 # generate a scatter plot
@@ -20,7 +20,7 @@ sns.pairplot(d)
 
 # use L1 penalization
 fr = lm.fit_regularized(method='l1', disp=False, alpha=0.1)
-print("Running logistic regression of SouthAfrica Heart data with L1 constraint:")
+print("\nRunning logistic regression of SouthAfrica Heart data with L1 constraint:\n")
 print(fr.summary())
 
 # vary the L1 penalty
@@ -33,9 +33,11 @@ for i, alpha in enumerate(alps):
 
 b = pd.DataFrame(b, index=alps)
 pl.figure(1)
-b.plot(title='regularized regression beta')
+b.plot(logx=True, title='regularized regression beta')
 
 # use
 b = b.set_index(np.nansum(b.abs(), axis=1)).iloc[::-1, 1:]
 pl.figure(2)
 b.plot(logx=True, title='regularized regression beta')
+pl.show()
+
